@@ -19,7 +19,7 @@ const Wrapper1 = styled.div`
   flex-direction: row; // 가로
   width: 100%;
   height: 30px;
-  background-color: pink;
+  background-color: red;
 `
 
 const Wrapper2 = styled.div`
@@ -29,7 +29,61 @@ const Wrapper2 = styled.div`
   flex-direction: row; // 가로
   width: 100%;
   height: 150px;
+  background-color: orange;
+`
+const Wrapper3 = styled.div`
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: row; // 가로
+  width: 100%;
+  height: 80px;
+  background-color: yellow;
+`
+const Wrapper4 = styled.div`
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: row; // 가로
+  width: 100%;
+  height: 150px;
+  background-color: green;
+`
+const Wrapper5 = styled.div`
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: row; // 가로
+  width: 100%;
+  height: 200px;
   background-color: blue;
+`
+const Wrapper6 = styled.div`
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: row; // 가로
+  width: 100%;
+  height: 100px;
+  background-color: blueviolet;
+`
+const Wrapper7 = styled.div`
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: row; // 가로
+  width: 100%;
+  height: 500px;
+  background-color: purple;
+`
+const Wrapper8 = styled.div`
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: row; // 가로
+  width: 100%;
+  height: 300px;
+  background-color: gray;
 `
 
 const Row = styled.div`
@@ -52,6 +106,12 @@ function MainPage() {
 
 
             </Wrapper2>
+            <Wrapper3> </Wrapper3>
+            <Wrapper4> </Wrapper4>
+            <Wrapper5> </Wrapper5>
+            <Wrapper6> </Wrapper6>
+            <Wrapper7> </Wrapper7>
+            <Wrapper8> </Wrapper8>
 
 
         </Background>
