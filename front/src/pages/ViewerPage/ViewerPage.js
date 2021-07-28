@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 
 function ViewerPage() {
-    return(
-        <> </>
+    return ( <
+        > < />
     )
 }
 export default ViewerPage;

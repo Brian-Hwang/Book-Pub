@@ -1,6 +1,17 @@
 import React from "react"
 import styled from "styled-components"
 
+
+
+import logo from '../../assets/Logo.svg'
+import Search from '../../assets/search.svg'
+import intro from '../../assets/intro.svg'
+import pop1 from '../../assets/pop1.svg'
+import pop2 from '../../assets/pop2.svg'
+import pop3 from '../../assets/pop3.svg'
+import pop4 from '../../assets/pop4.svg'
+import pop5 from '../../assets/pop5.svg'
+
 import popular1 from '../../assets/popular1.svg'
 import advertisement from '../../assets/advertisement.svg'
 import video1 from '../../assets/video1.svg'
@@ -25,9 +36,71 @@ const Background = styled.div`
   flex-direction: column; // 세로
 `
 
+const Input = styled.input`
+    color:#000000;
+    // background-color: #F7F3F3;
+    line-height : 20px;
+    font-size: 16px;
+    overflow-wrap:"auto";
+    height: 30px;
+    // border: 1px solid #ffffff;
+    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    outline:none;
+    
+    margin-top:11px;
+    // border-radius: 10px;
+    @media (min-width: 430px) and (max-width: 1440px) {
+    //between
+    width: 300px;
+    margin-left: 45px;
+  }
+
+  @media (min-width: 1440px) {
+    //desktop
+    width: 368px;
+    margin-left: 85px;
+  }
+  @media (max-width: 430px) {
+    //iphone
+    display: none;
+  }
+`
+const SearchButton = styled.button`
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  width: 40px;
+  height: 37px;
+  margin-top: 11px;
+  @media (min-width: 430px) and (max-width: 1440px) {
+    //between
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #f7f3f3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  @media (min-width: 1440px) {
+    //desktop
+    margin-right: 116px;
+    margin-left: 20px;
+    background-color: #f7f3f3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  @media (max-width: 430px) {
+    //iphone
+    background-color: #ffffff;
+    margin-top: 20px;
+    margin-right:5px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+  }
+`
+
+
 const Wrapper1 = styled.div`
   display: flex;
   align-items: right;
+  justify-content: right;
   flex-direction: row; // 가로
   width: 100%;
   height: 80px;
@@ -41,7 +114,7 @@ const Wrapper2 = styled.div`
   flex-direction: row; // 가로
   width: 100%;
   height: 200px;
-  background-color: orange;
+  background-color: white;
 `
 const Wrapper3 = styled.div`
   display: flex;
@@ -59,13 +132,13 @@ const Wrapper4 = styled.div`
   flex-direction: row; // 가로
   width: 100%;
   height: 150px;
-  background-color: green;
+  background-color: white;
 `
 const Wrapper5 = styled.div`
   display: flex;
   align-items: center;
   justify-items: center;
-  flex-direction: row; // 가로
+  flex-direction: column; // 가로
   width: 100%;
   height: 200px;
   background-color: blue;
@@ -200,17 +273,43 @@ function MainPage() {
     return(
         <> 
         <Background>
-            <Wrapper1></Wrapper1> 
-            <Wrapper2> 
-            <Row>
-                <img style={{ height: '50px', width: '50px' }} src={popular1} />
-              </Row>
+            <Wrapper1>
+            <Text> My Channel </Text>
+            <Text> My Page </Text>
+            <Text> Logout </Text>
 
+              </Wrapper1> 
+            <Wrapper2> 
+                <img style={{ height: '150px', width: '150px' }} src={logo} />
+                <Input></Input>
+                <SearchButton>
+        {' '}
+        <img style={{ width: '30px', height: '30px' }} src={Search} />
+      </SearchButton>
 
             </Wrapper2>
-            <Wrapper3> </Wrapper3>
-            <Wrapper4> </Wrapper4>
-            <Wrapper5> </Wrapper5>
+            <Wrapper3> 
+            <Text> Upload </Text>
+            <Text> Categories </Text>
+            <Text> Video </Text>
+            <Text> Premium </Text>
+            </Wrapper3>
+            <Wrapper4> 
+            <img style={{ width: '200px', height: '200px' }} src={intro} />
+
+            </Wrapper4>
+            <Wrapper5> 
+            <Text> Popular creators </Text>
+
+              <Row>
+              <img style={{ height: '100px', width: '100px' }} src={pop1} /> 
+            <img style={{ height: '100px', width: '100px' }} src={[pop2]} /> 
+            <img style={{ height: '100px', width: '100px' }} src={pop3} /> 
+            <img style={{ height: '100px', width: '100px' }} src={pop4} /> 
+            <img style={{ height: '100px', width: '100px' }} src={pop5} />            
+            </Row>
+
+            </Wrapper5>
             <Wrapper6>  <img src={advertisement} /> </Wrapper6>
 
             <Wrapper7> 
