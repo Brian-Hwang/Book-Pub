@@ -51,7 +51,7 @@ const Input = styled.input`
     // border-radius: 10px;
     @media (min-width: 430px) and (max-width: 1440px) {
     //between
-    width: 300px;
+    width: 400px;
     margin-left: 45px;
   }
 
@@ -98,32 +98,98 @@ const SearchButton = styled.button`
 
 
 const Wrapper1 = styled.div`
+
   display: flex;
-  align-items: right;
-  justify-content: right;
-  flex-direction: row; // 가로
-  width: 100%;
-  height: 80px;
-  background-color: gray;
+  align-self: flex-end;
+  flex-direction: row;
+  width: 20%;
+  height: 33px;
+  justify-content: flex-end;
+  margin-top: 15px;
+  margin-right: 15px;
+
+  @media (max-width: 375px) {
+    //iphone
+    justify-content: center;
+  }
+  @media (min-width: 375px) and (max-width: 1440px) {
+    //between
+    justify-content: center;
+  }
 `
 
+const Text_personal = styled.div`
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'NotoSans';
+  // margin-right: 5px;
+  text-align: center;
+  width: 100%;
+  margin-top: 5px;
+`
+const Line = styled.div`
+  width: 0px;
+  margin-top: 7px;
+  border: 1px solid #000000;
+  margin-left: 15px;
+  margin-right: 15px;
+  height: 15px;
+  @media (max-width: 375px) {
+    //iphone
+    display: none;
+  }
+  @media (min-width: 375px) and (max-width: 1440px) {
+    //between
+    display: none;
+  }
+`
 const Wrapper2 = styled.div`
   display: flex;
   align-items: center;
-  justify-items: center;
+  justify-items: flex-start;
   flex-direction: row; // 가로
   width: 100%;
-  height: 200px;
-  background-color: white;
+  height: 100px;
+  margin-top: 20px;
+
 `
+
+const MaskImage_logo = styled.img`
+  height: 200px;
+  @media (min-width: 430px) and (max-width: 1440px) {
+    //between
+    width: 130px;
+    height: 120px;
+  }
+  @media (max-width: 430px) {
+    //iphone
+    width: 150px;
+    height: 150px;
+  }
+`
+
 const Wrapper3 = styled.div`
   display: flex;
   align-items: center;
   justify-items: center;
+  align-self: center;
   flex-direction: row; // 가로
-  width: 100%;
-  height: 150px;
+  width: 80%;
+  height: 100px;
+  margin-top: 20px;
+
 `
+
+const Text_categories = styled.div`
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'NotoSans';
+  // margin-right: 5px;
+  text-align: center;
+  width: 100%;
+  margin-top: 5px;
+`
+
 const Wrapper4 = styled.div`
   display: flex;
   align-items: center;
@@ -131,16 +197,32 @@ const Wrapper4 = styled.div`
   flex-direction: row; // 가로
   width: 100%;
   height: 150px;
+  margin-top: 40px;
+
   background-color: white;
+`
+
+const MaskImage_slogan = styled.img`
+  width: 30%;
+  @media (min-width: 430px) and (max-width: 1440px) {
+    //between
+    width: 130px;
+    height: 120px;
+  }
+  @media (max-width: 430px) {
+    //iphone
+    width: 150px;
+    height: 150px;
+  }
 `
 const Wrapper5 = styled.div`
   display: flex;
   align-items: center;
   justify-items: center;
   flex-direction: column; // 가로
+  margin-top: 100px;
   width: 100%;
   height: 200px;
-  background-color: gray;
 `
 const Wrapper6 = styled.div`
   display: flex;
@@ -203,7 +285,7 @@ const Row = styled.div`
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
 `
 const Title = styled.div`
   font-size: 30px;
@@ -315,25 +397,35 @@ function MainPage() {
         <> 
         <Background>
             <Wrapper1>
-            <Text_right> My Channel | </Text_right>
-            <Text_right> My Page | </Text_right>
-            <Text_right> Logout </Text_right>
-
+            <Text_personal> My Channel </Text_personal>
+            <Line />
+            <Text_personal> My Page</Text_personal>
+            <Line />
+            <Text_personal> Logout </Text_personal>
               </Wrapper1> 
             <Wrapper2> 
-                <img style={{ height: '150px', width: '150px' }} src={logo} />
-                <Input></Input>
+              <MaskImage_logo img src={logo} />
+              <Row >
+              <Input></Input>
                 <SearchButton> {' '} <img style={{ width: '30px', height: '30px' }} src={Search} />
             </SearchButton>
+                
+              </Row>
+
             </Wrapper2>
             <Wrapper3> 
-            <Text_center> Upload </Text_center>
-            <Text_center> Categories </Text_center>
-            <Text_center> Video </Text_center>
-            <Text_center> Premium </Text_center>
+            <Text_categories> Upload </Text_categories>
+            <Text_categories> Categories </Text_categories>
+            <Text_categories> Video </Text_categories>
+            <Text_categories> Premium </Text_categories>
             </Wrapper3>
             <Wrapper4> 
-            <img style={{ width: '100%', height: '30%' }} src={intro} />
+            <Row>
+
+            <MaskImage_slogan img src={intro} />
+            </Row>
+
+            {/* <img style={{ width: '100%', height: '30%' }} src={intro} /> */}
 
             </Wrapper4>
             <Wrapper5> 
