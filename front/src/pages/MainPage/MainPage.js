@@ -324,7 +324,7 @@ function MainPage() {
                 <img style={{ height: '150px', width: '150px' }} src={logo} />
                 <Input></Input>
                 <SearchButton> {' '} <img style={{ width: '30px', height: '30px' }} src={Search} />
-                </SearchButton>
+            </SearchButton>
             </Wrapper2>
             <Wrapper3> 
             <Text_center> Upload </Text_center>
