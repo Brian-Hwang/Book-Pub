@@ -76,7 +76,7 @@ const Wrapper6 = styled.div`
   justify-items: center;
   flex-direction: row; // 가로
   width: 100%;
-  height: 500px;
+  height: 300px;
   background-color: white;
 `
 const Wrapper7 = styled.div`
@@ -112,10 +112,18 @@ const Wrapper8 = styled.div`
   display: flex;
   align-items: center;
   justify-items: center;
-  flex-direction: row; // 가로
+  flex-direction: column; // 가로
   width: 100%;
-  height: 300px;
-  background-color: gray;
+  height: 1000px;
+`
+const Wrapper8_sub = styled.div`
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  flex-direction: row; // 가로
+  width: 60%;
+  height: 900px;
 `
 
 const Row = styled.div`
@@ -125,13 +133,14 @@ const Row = styled.div`
   width: 100%;
   overflow: hidden;
 `
-const VideoTitle = styled.div`
+const Title = styled.div`
   font-size: 30px;
   font-weight: bold;
   font-family: 'NotoSans';
   text-align: center;
   width: 100%;
-  margin-top: 5px;
+  height: 100px;
+  margin-top: 100px;
 `
 const Text = styled.div`
   font-size: 15px;
@@ -156,6 +165,36 @@ const Viewmore = styled.div`
   margin-top: 5px;
   margin-bottom: 10px;
 `
+const ChargeBox = styled.div`
+  display: flex;
+  align-items: left;
+  justify-items: left;
+  flex-direction: column; // 가로
+  width: 50%;
+  height: 95%;
+`
+
+const ChargeText = styled.div`
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'NotoSans';
+  margin-right: 5px;
+  text-align: center;
+  width: 100%;
+  margin-top: 5px;
+`
+
+const ChargeText_Blue = styled.div`
+  font-size:20px;
+  color: #4B89DC;
+  font-weight: bold;
+  font-family: 'NotoSans';
+  margin-right: 5px;
+  text-align: center;
+  width: 100%;
+  margin-top: 5px;
+`
+
 
 function MainPage() {
     return(
@@ -175,7 +214,7 @@ function MainPage() {
             <Wrapper6>  <img src={advertisement} /> </Wrapper6>
 
             <Wrapper7> 
-              <VideoTitle> Newly Updated </VideoTitle>
+              <Title> Newly Updated </Title>
               <Box> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video1} /> 
@@ -224,7 +263,39 @@ function MainPage() {
               <Viewmore> View more </Viewmore> 
 
             </Wrapper7>
-            <Wrapper8> </Wrapper8>
+            <Wrapper8> 
+              <Title>Charge</Title> 
+
+              <Wrapper8_sub> 
+              <ChargeBox>
+                <div>
+                <ChargeText_Blue > IT's </ChargeText_Blue > 
+                <ChargeText > Basic </ChargeText> 
+                </div> 
+                
+                <ChargeText> Free</ChargeText> 
+                <ChargeText> Ads </ChargeText> 
+                <ChargeText> Charge </ChargeText> 
+                <ChargeText> Paid Download </ChargeText> 
+                <ChargeText> ... </ChargeText> 
+              </ChargeBox>
+              <ChargeBox>
+                <div>
+                <ChargeText_Blue > IT's </ChargeText_Blue > 
+                <ChargeText> Premium </ChargeText> 
+                </div> 
+                
+                <ChargeText> $10 per month</ChargeText> 
+                <ChargeText> No Ads </ChargeText> 
+                <ChargeText> No charge </ChargeText> 
+                <ChargeText> Free Download </ChargeText> 
+                <ChargeText> ... </ChargeText> 
+              </ChargeBox>
+              </Wrapper8_sub>
+          
+
+
+            </Wrapper8>
 
 
         </Background>
