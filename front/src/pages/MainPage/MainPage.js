@@ -104,7 +104,7 @@ const Wrapper1 = styled.div`
   flex-direction: row; // 가로
   width: 100%;
   height: 80px;
-  background-color: red;
+  background-color: gray;
 `
 
 const Wrapper2 = styled.div`
@@ -123,7 +123,7 @@ const Wrapper3 = styled.div`
   flex-direction: row; // 가로
   width: 100%;
   height: 150px;
-  background-color: yellow;
+  background-color: gray;
 `
 const Wrapper4 = styled.div`
   display: flex;
@@ -141,7 +141,7 @@ const Wrapper5 = styled.div`
   flex-direction: column; // 가로
   width: 100%;
   height: 200px;
-  background-color: blue;
+  background-color: gray;
 `
 const Wrapper6 = styled.div`
   display: flex;
@@ -215,7 +215,16 @@ const Title = styled.div`
   height: 100px;
   margin-top: 100px;
 `
-const Text = styled.div`
+const Text_right = styled.div`
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'NotoSans';
+  margin-right: 5px;
+  text-align: right;
+  width: 10%;
+  margin-top: 5px;
+`
+const Text_center = styled.div`
   font-size: 15px;
   font-weight: bold;
   font-family: 'NotoSans';
@@ -268,15 +277,23 @@ const ChargeText_Blue = styled.div`
   margin-top: 5px;
 `
 
+const Creators= styled.div`
+  height: 100px; width: 100px;
+  margin-right: 10px;
+  text-align: center;
+  width: 100%;
+  margin-top: 5px;
+`
+
 
 function MainPage() {
     return(
         <> 
         <Background>
             <Wrapper1>
-            <Text> My Channel </Text>
-            <Text> My Page </Text>
-            <Text> Logout </Text>
+            <Text_right> My Channel | </Text_right>
+            <Text_right> My Page | </Text_right>
+            <Text_right> Logout </Text_right>
 
               </Wrapper1> 
             <Wrapper2> 
@@ -289,19 +306,20 @@ function MainPage() {
 
             </Wrapper2>
             <Wrapper3> 
-            <Text> Upload </Text>
-            <Text> Categories </Text>
-            <Text> Video </Text>
-            <Text> Premium </Text>
+            <Text_right> Upload </Text_right>
+            <Text_right> Categories </Text_right>
+            <Text_right> Video </Text_right>
+            <Text_right> Premium </Text_right>
             </Wrapper3>
             <Wrapper4> 
             <img style={{ width: '200px', height: '200px' }} src={intro} />
 
             </Wrapper4>
             <Wrapper5> 
-            <Text> Popular creators </Text>
+            <Text_center> Popular creators </Text_center>
 
               <Row>
+                <Creators> pop1 </Creators>
               <img style={{ height: '100px', width: '100px' }} src={pop1} /> 
             <img style={{ height: '100px', width: '100px' }} src={[pop2]} /> 
             <img style={{ height: '100px', width: '100px' }} src={pop3} /> 
@@ -317,45 +335,45 @@ function MainPage() {
               <Box> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video1} /> 
-                <Text> [HOT] 놓치면 안될 하반기 IT이슈 Best5 </Text>
+                <Text_center> [HOT] 놓치면 안될 하반기 IT이슈 Best5 </Text_center>
               </Video> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video2} /> 
-                <Text> 하루만에 웹 사이트 만들기[완결판] </Text>
+                <Text_center> 하루만에 웹 사이트 만들기[완결판] </Text_center>
               </Video> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video3} /> 
-                <Text> [제작부터 심사까지]하루만에 이모티콘 만들기 </Text>
+                <Text_right> [제작부터 심사까지]하루만에 이모티콘 만들기 </Text_right>
               </Video> 
               </Box>
 
               <Box> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video4} /> 
-                <Text> 유튜브 썸네일 쉽게 만들기 #1 </Text>
+                <Text_right> 유튜브 썸네일 쉽게 만들기 #1 </Text_right>
               </Video> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video5} /> 
-                <Text> Dark World 개발자가 직접 공개하는 제작과정 </Text>
+                <Text_right> Dark World 개발자가 직접 공개하는 제작과정 </Text_right>
               </Video> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video6} /> 
-                <Text> [Kids] 과학의 날 축하 영상 </Text>
+                <Text_right> [Kids] 과학의 날 축하 영상 </Text_right>
               </Video> 
               </Box>
 
               <Box> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video7} /> 
-                <Text> IT시장의 트렌드 분석 </Text>
+                <Text_right> IT시장의 트렌드 분석 </Text_right>
               </Video> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video8} /> 
-                <Text> IT’s 닷컴에서 강의 시작했습니다. </Text>
+                <Text_right> IT’s 닷컴에서 강의 시작했습니다. </Text_right>
               </Video> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video9} /> 
-                <Text> 대기업 코딩테스트 합격 끝장내기 </Text>
+                <Text_right> 대기업 코딩테스트 합격 끝장내기 </Text_right>
               </Video> 
               </Box>
 
