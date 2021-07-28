@@ -123,7 +123,6 @@ const Wrapper3 = styled.div`
   flex-direction: row; // 가로
   width: 100%;
   height: 150px;
-  background-color: gray;
 `
 const Wrapper4 = styled.div`
   display: flex;
@@ -221,10 +220,20 @@ const Text_right = styled.div`
   font-family: 'NotoSans';
   margin-right: 5px;
   text-align: right;
-  width: 10%;
-  margin-top: 5px;
+  width: 100%;
+  margin-top: 20px;
 `
 const Text_center = styled.div`
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'NotoSans';
+  margin-right: 5px;
+  text-align: center;
+  width: 100%;
+  margin-top: 5px;
+`
+
+const Videotext = styled.div`
   font-size: 15px;
   font-weight: bold;
   font-family: 'NotoSans';
@@ -277,12 +286,27 @@ const ChargeText_Blue = styled.div`
   margin-top: 5px;
 `
 
-const Creators= styled.div`
-  height: 100px; width: 100px;
-  margin-right: 10px;
-  text-align: center;
+const Creators = styled.img`
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  margin-right: 30px;
+`
+
+const Ads = styled.img`
   width: 100%;
-  margin-top: 5px;
+  height: 220px;
+  margin-top: 30px;
+  @media (min-width: 430px) and (max-width: 1440px) {
+    //between
+    width: 200px;
+    height: 150px;
+  }
+  @media (max-width: 430px) {
+    //iphone
+    width: 200x;
+    height: 200px;
+  }
 `
 
 
@@ -299,81 +323,77 @@ function MainPage() {
             <Wrapper2> 
                 <img style={{ height: '150px', width: '150px' }} src={logo} />
                 <Input></Input>
-                <SearchButton>
-        {' '}
-        <img style={{ width: '30px', height: '30px' }} src={Search} />
-      </SearchButton>
-
+                <SearchButton> {' '} <img style={{ width: '30px', height: '30px' }} src={Search} />
+                </SearchButton>
             </Wrapper2>
             <Wrapper3> 
-            <Text_right> Upload </Text_right>
-            <Text_right> Categories </Text_right>
-            <Text_right> Video </Text_right>
-            <Text_right> Premium </Text_right>
+            <Text_center> Upload </Text_center>
+            <Text_center> Categories </Text_center>
+            <Text_center> Video </Text_center>
+            <Text_center> Premium </Text_center>
             </Wrapper3>
             <Wrapper4> 
-            <img style={{ width: '200px', height: '200px' }} src={intro} />
+            <img style={{ width: '100%', height: '30%' }} src={intro} />
 
             </Wrapper4>
             <Wrapper5> 
             <Text_center> Popular creators </Text_center>
 
-              <Row>
-                <Creators> pop1 </Creators>
-              <img style={{ height: '100px', width: '100px' }} src={pop1} /> 
-            <img style={{ height: '100px', width: '100px' }} src={[pop2]} /> 
-            <img style={{ height: '100px', width: '100px' }} src={pop3} /> 
-            <img style={{ height: '100px', width: '100px' }} src={pop4} /> 
-            <img style={{ height: '100px', width: '100px' }} src={pop5} />            
+            <Row>
+            <Creators src={pop1}></Creators>  
+            <Creators src={pop2}></Creators>    
+            <Creators src={pop3}></Creators>    
+            <Creators src={pop4}></Creators>    
+            <Creators src={pop5}></Creators>           
             </Row>
 
             </Wrapper5>
-            <Wrapper6>  <img src={advertisement} /> </Wrapper6>
+            <Wrapper6>  <img style={{ height: '100px', width: '100%' }} src={advertisement} /> </Wrapper6>
 
             <Wrapper7> 
               <Title> Newly Updated </Title>
               <Box> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video1} /> 
-                <Text_center> [HOT] 놓치면 안될 하반기 IT이슈 Best5 </Text_center>
+                <Videotext> [HOT] 놓치면 안될 하반기 IT이슈 Best5 </Videotext>
               </Video> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video2} /> 
-                <Text_center> 하루만에 웹 사이트 만들기[완결판] </Text_center>
+                <Videotext> 하루만에 웹 사이트 만들기[완결판] </Videotext>
               </Video> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video3} /> 
-                <Text_right> [제작부터 심사까지]하루만에 이모티콘 만들기 </Text_right>
+                <Videotext> [제작부터 심사까지]하루만에 이모티콘 만들기 </Videotext>
               </Video> 
               </Box>
 
               <Box> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video4} /> 
-                <Text_right> 유튜브 썸네일 쉽게 만들기 #1 </Text_right>
+                <Videotext> 유튜브 썸네일 쉽게 만들기 #1 </Videotext>
               </Video> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video5} /> 
-                <Text_right> Dark World 개발자가 직접 공개하는 제작과정 </Text_right>
+                <Videotext> Dark World 개발자가 직접 공개하는 제작과정 </Videotext>
               </Video> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video6} /> 
-                <Text_right> [Kids] 과학의 날 축하 영상 </Text_right>
+                <Videotext> [Kids] 과학의 날 축하 영상 </Videotext>
               </Video> 
               </Box>
 
               <Box> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video7} /> 
-                <Text_right> IT시장의 트렌드 분석 </Text_right>
+                <Videotext> IT시장의 트렌드 분석 </Videotext>
               </Video> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video8} /> 
-                <Text_right> IT’s 닷컴에서 강의 시작했습니다. </Text_right>
+                <Videotext> IT’s 닷컴에서 강의 시작했습니다. </Videotext>
               </Video> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video9} /> 
-                <Text_right> 대기업 코딩테스트 합격 끝장내기 </Text_right>
+                <Videotext> 대기업 코딩테스트 합격 끝장내기 </Videotext>
               </Video> 
               </Box>
 
