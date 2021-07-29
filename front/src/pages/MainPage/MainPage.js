@@ -1,4 +1,5 @@
 import React from "react"
+import { useHistory } from 'react-router-dom'
 import styled from "styled-components"
 
 
@@ -43,27 +44,10 @@ const Input = styled.input`
     font-size: 16px;
     overflow-wrap:"auto";
     height: 30px;
-    // border: 1px solid #ffffff;
-    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    outline:none;
-    
-    margin-top:11px;
-    // border-radius: 10px;
-    @media (min-width: 430px) and (max-width: 1440px) {
-    //between
     width: 400px;
-    margin-left: 45px;
-  }
-
-  @media (min-width: 1440px) {
-    //desktop
-    width: 368px;
-    margin-left: 85px;
-  }
-  @media (max-width: 430px) {
-    //iphone
-    display: none;
-  }
+    margin-left: 30px;
+    outline:none;
+    margin-top:35px;
 `
 const SearchButton = styled.button`
   outline: none;
@@ -71,29 +55,11 @@ const SearchButton = styled.button`
   border-radius: 10px;
   width: 40px;
   height: 37px;
-  margin-top: 11px;
-  @media (min-width: 430px) and (max-width: 1440px) {
-    //between
-    margin-right: 10px;
-    margin-left: 10px;
-    background-color: #f7f3f3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-
-  @media (min-width: 1440px) {
-    //desktop
-    margin-right: 116px;
-    margin-left: 20px;
-    background-color: #f7f3f3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-  @media (max-width: 430px) {
-    //iphone
-    background-color: #ffffff;
-    margin-top: 20px;
-    margin-right:5px;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
-  }
+  margin-top: 35px;
+  margin-right: 116px;
+  margin-left: 20px;
+  background-color: #f7f3f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
 
 
@@ -155,17 +121,8 @@ const Wrapper2 = styled.div`
 `
 
 const MaskImage_logo = styled.img`
-  height: 200px;
-  @media (min-width: 430px) and (max-width: 1440px) {
-    //between
-    width: 130px;
-    height: 120px;
-  }
-  @media (max-width: 430px) {
-    //iphone
-    width: 150px;
-    height: 150px;
-  }
+  height: 150px;
+  width: 150px;
 `
 
 const Wrapper3 = styled.div`
@@ -204,16 +161,6 @@ const Wrapper4 = styled.div`
 
 const MaskImage_slogan = styled.img`
   width: 30%;
-  @media (min-width: 430px) and (max-width: 1440px) {
-    //between
-    width: 130px;
-    height: 120px;
-  }
-  @media (max-width: 430px) {
-    //iphone
-    width: 150px;
-    height: 150px;
-  }
 `
 const Wrapper5 = styled.div`
   display: flex;
@@ -262,6 +209,35 @@ align-items: center;
 justify-content: center;
 `
 
+const VideoTextButton = styled.button`
+  display: flex;
+  
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'NotoSans';
+  margin-right: 5px;
+  text-align: center;
+  width: 100%;
+  margin-top: 5px;
+
+  flex-direction: column; // 세로
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: white;
+  outline:0;
+  border: 0;
+`
+const Videotext = styled.div`
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'NotoSans';
+  margin-right: 5px;
+  text-align: center;
+  width: 100%;
+  margin-top: 5px;
+`
+
 const Wrapper8 = styled.div`
   display: flex;
   align-items: center;
@@ -285,6 +261,21 @@ const Row = styled.div`
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  // overflow: hidden;
+`
+
+const Row2 = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 30%;
+  // overflow: hidden;
+`
+const Row3 = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 40%;
   // overflow: hidden;
 `
 const Title = styled.div`
@@ -315,16 +306,6 @@ const Text_center = styled.div`
   margin-top: 5px;
 `
 
-const Videotext = styled.div`
-  font-size: 15px;
-  font-weight: bold;
-  font-family: 'NotoSans';
-  margin-right: 5px;
-  text-align: center;
-  width: 100%;
-  margin-top: 5px;
-`
-
 const Viewmore = styled.div`
   font-size: 15px;
   font-weight: bold;
@@ -340,8 +321,8 @@ const Viewmore = styled.div`
 `
 const ChargeBox = styled.div`
   display: flex;
-  align-items: left;
-  justify-items: left;
+  align-items: center;
+  justify-items: center;
   flex-direction: column; // 가로
   width: 50%;
   height: 95%;
@@ -378,21 +359,13 @@ const Creators = styled.img`
 const Ads = styled.img`
   width: 100%;
   height: 220px;
-  margin-top: 30px;
-  @media (min-width: 430px) and (max-width: 1440px) {
-    //between
-    width: 200px;
-    height: 150px;
-  }
-  @media (max-width: 430px) {
-    //iphone
-    width: 200x;
-    height: 200px;
-  }
+  margin-top: 100px;
+
 `
 
 
 function MainPage() {
+  const history = useHistory()
     return(
         <> 
         <Background>
@@ -404,8 +377,8 @@ function MainPage() {
             <Text_personal> Logout </Text_personal>
               </Wrapper1> 
             <Wrapper2> 
-              <MaskImage_logo img src={logo} />
               <Row >
+              <MaskImage_logo img src={logo} />
               <Input></Input>
                 <SearchButton> {' '} <img style={{ width: '30px', height: '30px' }} src={Search} />
             </SearchButton>
@@ -440,14 +413,16 @@ function MainPage() {
             </Row>
 
             </Wrapper5>
-            <Wrapper6>  <img style={{ height: '100px', width: '100%' }} src={advertisement} /> </Wrapper6>
+
+            <Row> <Ads img src={advertisement}/>  </Row>
 
             <Wrapper7> 
               <Title> Newly Updated </Title>
               <Box> 
-              <Video> 
+              <Video>
                 <img style={{ height: '300px', width: '300px' }} src={video1} /> 
-                <Videotext> [HOT] 놓치면 안될 하반기 IT이슈 Best5 </Videotext>
+                <VideoTextButton onClick={() => history.push(`/viewer`)}> [HOT] 놓치면 안될 하반기 IT이슈 Best5 </VideoTextButton>
+
               </Video> 
               <Video> 
                 <img style={{ height: '300px', width: '300px' }} src={video2} /> 
@@ -497,10 +472,11 @@ function MainPage() {
 
               <Wrapper8_sub> 
               <ChargeBox>
-                <div>
+                <Row2> 
                 <ChargeText_Blue > IT's </ChargeText_Blue > 
                 <ChargeText > Basic </ChargeText> 
-                </div> 
+                </Row2>
+                
                 
                 <ChargeText> Free</ChargeText> 
                 <ChargeText> Ads </ChargeText> 
@@ -509,10 +485,14 @@ function MainPage() {
                 <ChargeText> ... </ChargeText> 
               </ChargeBox>
               <ChargeBox>
-                <div>
+                
+                <Row3> 
                 <ChargeText_Blue > IT's </ChargeText_Blue > 
                 <ChargeText> Premium </ChargeText> 
-                </div> 
+                </Row3>
+                
+                
+                
                 
                 <ChargeText> $10 per month</ChargeText> 
                 <ChargeText> No Ads </ChargeText> 
