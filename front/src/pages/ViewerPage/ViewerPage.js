@@ -2,10 +2,8 @@ import React from "react"
 import {NavLink} from "react-router-dom";
 import styled from "styled-components"
 
-
 import logo from '../../assets/Logo.svg'
 import Search from '../../assets/search.svg'
-
 
 
 const Background = styled.div`
