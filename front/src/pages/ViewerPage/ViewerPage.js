@@ -69,6 +69,7 @@ const Wrapper1 = styled.div`
   justify-content: flex-end;
   margin-top: 15px;
   margin-right: 15px;
+  overflow: hidden;
 `;
 
 const Text_personal = styled.div`
@@ -104,6 +105,7 @@ const Wrapper2 = styled.div`
   width: 100%;
   height: 100px;
   margin-top: 20px;
+  overflow: hidden;
 `;
 
 const MaskImage_logo = styled.img`
@@ -118,23 +120,12 @@ const Download = styled.img`
   margin-top: 2%;
 `;
 const Code = styled.img`
-  height: 80%;
-  width: 90%;
+  height: 60%;
+  width: 70%;
   margin-left: 3%;
   margin-top: 2%;
   margin-bottom: 3%;
 
-  @media (min-width: 430px) and (max-width: 1440px) {
-    //between
-    width: 70%;
-    height: 80%;
-  }
-
-  @media (min-width: 1440px) {
-    //desktop
-    width: 60%;
-    height: 70%;
-  }
 `;
 const PkAds = styled.img`
   height: 100%;
@@ -174,6 +165,7 @@ const Wrapper3 = styled.div`
   height: 50px;
   justify-content: flex-end;
   margin-top: 50px;
+  overflow: hidden;
 `;
 const Wrapper4 = styled.div`
   display: flex;
@@ -181,6 +173,7 @@ const Wrapper4 = styled.div`
   width: 100%;
   height: 1000px;
   border-bottom: 1px solid rgba(0, 0, 0, 255);
+  overflow: hidden;
 `;
 const Box1 = styled.div`
   display: flex;
@@ -292,7 +285,7 @@ const Wrapper5 = styled.div`
   flex-direction: row;
   width: 100%;
   height: 800px;
-  background-color: yellow;
+  overflow: hidden;
 `;
 const Box3 = styled.div`
   display: flex;
@@ -301,7 +294,6 @@ const Box3 = styled.div`
   align-items: flex-start;
   width: 75%;
   height: 800px;
-  background-color: yellow;
 `;
 const Box4 = styled.div`
   display: flex;
@@ -315,6 +307,7 @@ const Wrapper6 = styled.div`
   align-items: left;
   width: 100%;
   height: 1000px;
+  overflow: hidden;
 `;
 const Wrapper7 = styled.div`
   display: flex;
@@ -322,6 +315,7 @@ const Wrapper7 = styled.div`
   width: 100%;
   height: 800px;
   background-color: blue;
+  overflow: hidden;
 `;
 
 const CategoryButton = styled.button`
