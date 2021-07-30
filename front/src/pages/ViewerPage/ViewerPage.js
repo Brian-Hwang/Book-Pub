@@ -9,6 +9,21 @@ import video1 from "../../assets/video1.svg";
 import profile from "../../assets/profile.svg";
 import video3 from "../../assets/video3.svg";
 
+import Comment from "./Comment";
+
+import PackageAds from "../../assets/PackageAds.svg";
+import PackageDownload from "../../assets/PackageDownload.svg";
+import PackageCode from "../../assets/PackageCode.svg";
+import User1 from "../../assets/User1.svg";
+import User2 from "../../assets/User2.svg";
+import User3 from "../../assets/User3.svg";
+import User4 from "../../assets/User4.svg";
+import User5 from "../../assets/User5.svg";
+import arrow from "../../assets/arrow.svg";
+import myProfile from "../../assets/MyProfile.svg";
+
+import { AlwaysScrollSection } from "./AlwaysScrollSection";
+
 const Background = styled.div`
   background-color: white;
   background-repeat: no-repeat;
@@ -96,13 +111,62 @@ const MaskImage_logo = styled.img`
   width: 150px;
 `;
 
+const Download = styled.img`
+  height: 80%;
+  width: 90%;
+  margin-left: 3%;
+  margin-top: 2%;
+`;
+const Code = styled.img`
+  height: 80%;
+  width: 90%;
+  margin-left: 3%;
+  margin-top: 2%;
+  margin-bottom: 3%;
+
+  @media (min-width: 430px) and (max-width: 1440px) {
+    //between
+    width: 70%;
+    height: 80%;
+  }
+
+  @media (min-width: 1440px) {
+    //desktop
+    width: 60%;
+    height: 70%;
+  }
+`;
+const PkAds = styled.img`
+  height: 100%;
+  width: 100%;
+`;
+const Arrow = styled.img`
+  height: 30px;
+  width: 30px;
+  margin-left: 50px;
+  margin-top: 20px;
+`;
+const MyProfile = styled.img`
+  height: 100px;
+  width: 800px;
+  margin-top: 5%;
+  margin-left: 20%;
+`;
 const Row = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: left;
+  width: 100%;
+  // overflow: hidden;
+`;
+const Col = styled.div`
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
   // overflow: hidden;
 `;
+
 const Wrapper3 = styled.div`
   display: flex;
   flex-direction: row; // 가로
@@ -239,7 +303,9 @@ const Wrapper5 = styled.div`
 `;
 const Box3 = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 75%;
   height: 800px;
   background-color: yellow;
@@ -248,15 +314,14 @@ const Box4 = styled.div`
   display: flex;
   flex-direction: row;
   width: 25%;
-  height: 800px;
-  background-color: orange;
+  height: 1000px;
 `;
 const Wrapper6 = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: left;
   width: 100%;
-  height: 800px;
-  background-color: green;
+  height: 1000px;
 `;
 const Wrapper7 = styled.div`
   display: flex;
@@ -298,6 +363,22 @@ const Videotext = styled.div`
   margin-right: 5px;
   text-align: center;
   width: 100%;
+`;
+
+const Title = styled.div`
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+  height: 30px;
+  margin-top: 3%;
+  margin-left: 3%;
+  margin-right: 3%;
+`;
+const Division = styled.div`
+  width: 100%;
+  height: 2px;
+  color: black;
 `;
 
 function ViewerPage() {
@@ -403,10 +484,89 @@ function ViewerPage() {
           </Box2>
         </Wrapper4>
         <Wrapper5>
-          <Box3> </Box3>
-          <Box4> </Box4>
+          <Box3>
+            <Col>
+              <Title> packages </Title>
+              <Division> </Division>
+              <Download img src={PackageDownload} />
+              <Title> Code </Title>
+              <Code img src={PackageCode} />
+            </Col>
+          </Box3>
+          <Box4>
+            <PkAds img src={PackageAds} />
+          </Box4>
         </Wrapper5>
-        <Wrapper6> </Wrapper6>
+        <Wrapper6>
+          <Title> Q&A </Title>
+
+          <MyProfile img src={myProfile} />
+          <AlwaysScrollSection>
+            <Col>
+              <Comment icon={User1} name="Kick it" text="I Don't UNDERSTAND" />
+              <Row>
+                <Arrow img src={arrow} />
+                <Comment
+                  icon={User2}
+                  name="BG Kim(Business Girl)"
+                  text="Tell me in detail what you don't understand."
+                />
+              </Row>
+
+              <Comment
+                icon={User3}
+                name="FFFFFF"
+                text="I can't compile the development program."
+              />
+              <Row>
+                <Arrow img src={arrow} />
+                <Comment
+                  icon={User2}
+                  name="BG Kim(Business Girl)"
+                  text="Make sure the environment is properly set up."
+                />
+              </Row>
+
+              <Comment
+                icon={User4}
+                name="KittyBoy"
+                text="The video keeps stopping."
+              />
+              <Row>
+                <Arrow img src={arrow} />
+                <Comment
+                  icon={User2}
+                  name="BG Kim(Business Girl)"
+                  text="Check the Internet environment."
+                />
+              </Row>
+
+              <Comment icon={User1} name="Kick it" text="I Don't UNDERSTAND" />
+              <Row>
+                <Arrow img src={arrow} />
+                <Comment
+                  icon={User2}
+                  name="BG Kim(Business Girl)"
+                  text="Tell me in detail what you don't understand."
+                />
+              </Row>
+
+              <Comment
+                icon={User3}
+                name="FFFFFF"
+                text="I can't compile the development program."
+              />
+              <Row>
+                <Arrow img src={arrow} />
+                <Comment
+                  icon={User2}
+                  name="BG Kim(Business Girl)"
+                  text="Make sure the environment is properly set up."
+                />
+              </Row>
+            </Col>
+          </AlwaysScrollSection>
+        </Wrapper6>
         <Wrapper7> </Wrapper7>
       </Background>
     </>
