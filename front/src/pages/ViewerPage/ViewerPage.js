@@ -174,14 +174,12 @@ const Wrapper3 = styled.div`
   height: 50px;
   justify-content: flex-end;
   margin-top: 50px;
-  background-color: red;
 `;
 const Wrapper4 = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 1000px;
-  background-color: orange;
   border-bottom: 1px solid rgba(0, 0, 0, 255);
 `;
 const Box1 = styled.div`
@@ -189,7 +187,6 @@ const Box1 = styled.div`
   flex-direction: column;
   width: 70%;
   height: 1000px;
-  background-color: purple;
 `;
 const Box1_sub1 = styled.div`
 
@@ -197,7 +194,6 @@ const Box1_sub1 = styled.div`
   flex-direction: row;
   width: 100%
   height: 40%;
-  background-color: blanchedalmond;
 `;
 const Box1_sub2 = styled.div`
   display: flex;
@@ -205,7 +201,6 @@ const Box1_sub2 = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background-color: yellowgreen;
 `;
 const Text_Title = styled.div`
   font-size: 20px;
@@ -281,8 +276,6 @@ const Box2 = styled.div`
   width: 30%;
   height: 100%;
   border: 1px solid rgba(0, 0, 0, 255);
-
-  background-color: skyblue;
 `;
 const Text_relatedVideos = styled.div`
   margin-top: 10px;
