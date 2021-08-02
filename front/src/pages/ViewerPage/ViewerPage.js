@@ -21,6 +21,8 @@ import User4 from "../../assets/User4.svg";
 import User5 from "../../assets/User5.svg";
 import arrow from "../../assets/arrow.svg";
 import myProfile from "../../assets/MyProfile.svg";
+import up from "../../assets/up.svg";
+import down from "../../assets/down.svg";
 
 import { AlwaysScrollSection } from "./AlwaysScrollSection";
 
@@ -125,7 +127,6 @@ const Code = styled.img`
   margin-left: 3%;
   margin-top: 2%;
   margin-bottom: 3%;
-
 `;
 const PkAds = styled.img`
   height: 100%;
@@ -314,7 +315,6 @@ const Wrapper7 = styled.div`
   flex-direction: column;
   width: 100%;
   height: 800px;
-  background-color: blue;
   overflow: hidden;
 `;
 
@@ -368,6 +368,26 @@ const Division = styled.div`
   color: black;
 `;
 
+const CommentRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 25%;
+  // overflow: hidden;
+`;
+const Text_Comment = styled.div`
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "NotoSans";
+  font-color: grey;
+  // margin-right: 5px;
+  text-align: center;
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+`;
 function ViewerPage() {
   return (
     <>
@@ -554,7 +574,39 @@ function ViewerPage() {
             </Col>
           </AlwaysScrollSection>
         </Wrapper6>
-        <Wrapper7> </Wrapper7>
+
+        <Wrapper7>
+          <Title> Comment </Title>
+
+          <MyProfile img src={myProfile} />
+          <Col>
+            <Comment icon={User5} name="yaong" text="gooooooooood!!!!!!!" />
+            <CommentRow>
+              <img style={{ height: "100%" }} src={up} />
+              <Text_Comment> 3K </Text_Comment>
+              <img style={{ height: "100%" }} src={down} />
+              <Text_Comment> REPLY </Text_Comment>
+            </CommentRow>
+            <Comment
+              icon={User1}
+              name="kick it"
+              text="You teach better than my college professor.."
+            />
+            <CommentRow>
+              <img style={{ height: "100%" }} src={up} />
+              <Text_Comment> 1K </Text_Comment>
+              <img style={{ height: "100%" }} src={down} />
+              <Text_Comment> REPLY </Text_Comment>
+            </CommentRow>
+            <Comment icon={User2} name="FFFFFF" text="Wow amazing!!." />
+            <CommentRow>
+              <img style={{ height: "100%" }} src={up} />
+              <Text_Comment> 12 </Text_Comment>
+              <img style={{ height: "100%" }} src={down} />
+              <Text_Comment> REPLY </Text_Comment>
+            </CommentRow>
+          </Col>
+        </Wrapper7>
       </Background>
     </>
   );
