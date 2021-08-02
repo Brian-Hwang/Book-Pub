@@ -38,17 +38,17 @@ const Background = styled.div`
 `;
 
 const Input = styled.input`
-  color: #000000;
-  // background-color: #F7F3F3;
-  line-height: 20px;
-  font-size: 16px;
-  overflow-wrap: "auto";
-  height: 30px;
-  width: 400px;
-  margin-left: 30px;
-  outline: none;
-  margin-top: 35px;
-`;
+    color:#000000;
+    // background-color: #F7F3F3;
+    line-height : 20px;
+    font-size: 16px;
+    overflow-wrap:"auto";
+    height: 30px;
+    width: 400px;
+    margin-left: 30px;
+    outline:none;
+    margin-top:35px;
+`
 const SearchButton = styled.button`
   outline: none;
   border: 1px solid rgba(255, 255, 255, 0);
@@ -60,9 +60,11 @@ const SearchButton = styled.button`
   margin-left: 20px;
   background-color: #f7f3f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-`;
+`
+
 
 const Wrapper1 = styled.div`
+
   display: flex;
   align-self: flex-end;
   flex-direction: row;
@@ -71,18 +73,26 @@ const Wrapper1 = styled.div`
   justify-content: flex-end;
   margin-top: 15px;
   margin-right: 15px;
-  overflow: hidden;
-`;
+
+  @media (max-width: 375px) {
+    //iphone
+    justify-content: center;
+  }
+  @media (min-width: 375px) and (max-width: 1440px) {
+    //between
+    justify-content: center;
+  }
+`
 
 const Text_personal = styled.div`
   font-size: 15px;
   font-weight: bold;
-  font-family: "NotoSans";
+  font-family: 'NotoSans';
   // margin-right: 5px;
   text-align: center;
   width: 100%;
   margin-top: 5px;
-`;
+`
 const Line = styled.div`
   width: 0px;
   margin-top: 7px;
@@ -98,7 +108,7 @@ const Line = styled.div`
     //between
     display: none;
   }
-`;
+`
 const Wrapper2 = styled.div`
   display: flex;
   align-items: center;
@@ -107,13 +117,12 @@ const Wrapper2 = styled.div`
   width: 100%;
   height: 100px;
   margin-top: 20px;
-  overflow: hidden;
-`;
+`
 
 const MaskImage_logo = styled.img`
   height: 150px;
   width: 150px;
-`;
+`
 
 const Download = styled.img`
   height: 80%;
@@ -143,6 +152,13 @@ const MyProfile = styled.img`
   width: 800px;
   margin-top: 5%;
   margin-left: 20%;
+`;
+
+const Heart = styled.img`
+  height: 80px;
+  width: 80px;
+  margin-top: 5%;
+  margin-bottom: 5%;
 `;
 const Row = styled.div`
   display: flex;
@@ -186,7 +202,7 @@ const Box1_sub1 = styled.div`
 
   display: flex;
   flex-direction: row;
-  width: 100%
+  width: 100%;
   height: 40%;
 `;
 const Box1_sub2 = styled.div`
@@ -210,7 +226,7 @@ const Box1_sub2_sub1 = styled.div`
   justify-items: center;
   flex-direction: row;
   width: 100%;
-  height: 8%;
+  height: 10%;
   background-color: white;
 `;
 const Box1_sub2_sub2 = styled.div`
@@ -237,8 +253,9 @@ const Box1_sub2_sub2_sub1 = styled.div`
   background-color: white;
 `;
 const Text_channel = styled.div`
-  font-size: 18px;
+  font-size: 20px;
   font-family: "NotoSans";
+  font-weight: bold;
   margin-left: 10px;
   text-align: start;
   width: 100%;
@@ -255,8 +272,7 @@ const Box1_sub2_sub2_sub2 = styled.div`
   background-color: white;
 `;
 const Text_channel_description = styled.div`
-  font-size: 13px;
-  font-family: "NotoSans";
+  font-size: 17px;
   margin-left: 10px;
   text-align: start;
   width: 100%;
@@ -274,9 +290,8 @@ const Box2 = styled.div`
 const Text_relatedVideos = styled.div`
   margin-top: 10px;
   margin-bottom: 20px;
-  font-size: 23px;
+  font-size: 25px;
   font-weight: bold;
-  font-family: "NotoSans";
   margin-left: 10px;
   text-align: center;
   width: 100%;
@@ -343,11 +358,21 @@ const Video = styled.div`
   margin-top: 10px;
   margin-bottom: 15px;
 `;
+const FirstVideo = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column; // 세로
+  align-items: center;
+  justify-content: center;
+  margin-top: 160px;
+  margin-bottom: 15px;
+`;
 const Videotext = styled.div`
-  font-size: 13px;
+  font-size: 17px;
   font-weight: bold;
   font-family: "NotoSans";
   margin-right: 5px;
+  margin-top: 5px;
   text-align: center;
   width: 100%;
 `;
@@ -356,11 +381,20 @@ const Title = styled.div`
   font-size: 30px;
   font-weight: bold;
   text-align: left;
-  width: 100%;
-  height: 30px;
-  margin-top: 3%;
-  margin-left: 3%;
+  width: 90%;
+  height: 100px;
+  margin-top: 60px;
+  margin-bottom: 5px;
   margin-right: 3%;
+  margin-left: 3%;
+`;
+const TitleBox = styled.div`
+  text-align: left;
+  width: 100%;
+  height: 120px;
+  margin-top: 10px;
+  margin-right: 3%;
+  border-bottom: 1px solid rgba(0, 0, 0, 255);
 `;
 const Division = styled.div`
   width: 100%;
@@ -381,7 +415,6 @@ const Text_Comment = styled.div`
   font-size: 20px;
   font-weight: bold;
   font-family: "NotoSans";
-  font-color: grey;
   // margin-right: 5px;
   text-align: center;
   width: 100%;
@@ -425,7 +458,7 @@ function ViewerPage() {
             <Box1_sub2>
               <Box1_sub2_sub1>
                 <Text_Title> [놓치면 안될 하반기 IT이슈 Best 5] </Text_Title>
-                <img style={{ width: "8%" }} src={like} />
+                <Heart img src={like}/>
               </Box1_sub2_sub1>
               <Box1_sub2_sub2>
                 <Box1_sub2_sub2_sub1>
@@ -433,15 +466,9 @@ function ViewerPage() {
                   <Text_channel>BG Kim (Business Girl)</Text_channel>
                 </Box1_sub2_sub2_sub1>
                 <Box1_sub2_sub2_sub2>
-                  <Text_channel_description>
-                    BG Kim은 누구인가요?
-                  </Text_channel_description>
-                  <Text_channel_description>
-                    microsoft, google, kakao 3사에 특별채용된 풀스택 개발자이자
-                  </Text_channel_description>
-                  <Text_channel_description>
-                    IT’s Parter Creator 입니다.
-                  </Text_channel_description>
+                  <Text_channel_description> BG Kim은 누구인가요? </Text_channel_description>
+                  <Text_channel_description> microsoft, google, kakao 3사에 특별채용된 풀스택 개발자이자 </Text_channel_description>
+                  <Text_channel_description>  IT’s Parter Creator 입니다. </Text_channel_description>
                   <Text_channel_description>
                     ‎‎‏‏‎ ‎‏‏‎
                   </Text_channel_description>
@@ -460,6 +487,15 @@ function ViewerPage() {
           <Box2>
             <Text_relatedVideos> Related Videos </Text_relatedVideos>
 
+            <AlwaysScrollSection> 
+            <Col> 
+            <FirstVideo>
+              <img style={{ width: "90%" }} src={video3} />
+              <Videotext>
+                {" "}
+                [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
+              </Videotext>
+            </FirstVideo>
             <Video>
               <img style={{ width: "90%" }} src={video3} />
               <Videotext>
@@ -481,22 +517,18 @@ function ViewerPage() {
                 [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
               </Videotext>
             </Video>
-            <Video>
-              <img style={{ width: "90%" }} src={video3} />
-              <Videotext>
-                {" "}
-                [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
-              </Videotext>
-            </Video>
+            </Col>
+            </AlwaysScrollSection> 
           </Box2>
         </Wrapper4>
         <Wrapper5>
           <Box3>
             <Col>
-              <Title> packages </Title>
+            <TitleBox> <Title> packages </Title> </TitleBox>
+              
               <Division> </Division>
               <Download img src={PackageDownload} />
-              <Title> Code </Title>
+              <TitleBox> <Title> Code </Title> </TitleBox>
               <Code img src={PackageCode} />
             </Col>
           </Box3>
@@ -505,10 +537,10 @@ function ViewerPage() {
           </Box4>
         </Wrapper5>
         <Wrapper6>
-          <Title> Q&A </Title>
+        <TitleBox> <Title> Q&A </Title> </TitleBox>
 
           <MyProfile img src={myProfile} />
-          <AlwaysScrollSection>
+        
             <Col>
               <Comment icon={User1} name="Kick it" text="I Don't UNDERSTAND" />
               <Row>
@@ -548,35 +580,13 @@ function ViewerPage() {
                 />
               </Row>
 
-              <Comment icon={User1} name="Kick it" text="I Don't UNDERSTAND" />
-              <Row>
-                <Arrow img src={arrow} />
-                <Comment
-                  icon={User2}
-                  name="BG Kim(Business Girl)"
-                  text="Tell me in detail what you don't understand."
-                />
-              </Row>
-
-              <Comment
-                icon={User3}
-                name="FFFFFF"
-                text="I can't compile the development program."
-              />
-              <Row>
-                <Arrow img src={arrow} />
-                <Comment
-                  icon={User2}
-                  name="BG Kim(Business Girl)"
-                  text="Make sure the environment is properly set up."
-                />
-              </Row>
+             
             </Col>
-          </AlwaysScrollSection>
+          
         </Wrapper6>
 
         <Wrapper7>
-          <Title> Comment </Title>
+        <TitleBox> <Title> Comment </Title> </TitleBox>
 
           <MyProfile img src={myProfile} />
           <Col>

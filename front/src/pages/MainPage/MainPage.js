@@ -117,7 +117,6 @@ const Wrapper2 = styled.div`
   width: 100%;
   height: 100px;
   margin-top: 20px;
-
 `
 
 const MaskImage_logo = styled.img`
@@ -186,7 +185,7 @@ const Wrapper7 = styled.div`
   justify-items: center;
   flex-direction: column; // 세로
   width: 100%;
-  height: 900px;
+  height: 1000px;
 `
 
 const Box = styled.div`
@@ -229,7 +228,7 @@ const VideoTextButton = styled.button`
   border: 0;
 `
 const Videotext = styled.div`
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
   font-family: 'NotoSans';
   margin-right: 5px;
@@ -312,11 +311,11 @@ const Viewmore = styled.div`
   font-family: 'NotoSans';
   margin-right: 5px;
   text-align: right;
-  width: 90px;
+  width: 85px;
   height: 30px;
   margin-left: 90%;
   background-color: #F6F6F6;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 10px;
 `
 const ChargeBox = styled.div`
@@ -336,6 +335,18 @@ const ChargeText = styled.div`
   text-align: center;
   width: 100%;
   margin-top: 5px;
+`
+
+const ChargeText_under = styled.div`
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'NotoSans';
+  margin-right: 5px;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  text-decoration: underline;
+  
 `
 
 const ChargeText_Blue = styled.div`
@@ -478,7 +489,7 @@ function MainPage() {
                 </Row2>
                 
                 
-                <ChargeText> Free</ChargeText> 
+                <ChargeText_under> Free</ChargeText_under> 
                 <ChargeText> Ads </ChargeText> 
                 <ChargeText> Charge </ChargeText> 
                 <ChargeText> Paid Download </ChargeText> 
@@ -494,7 +505,7 @@ function MainPage() {
                 
                 
                 
-                <ChargeText> $10 per month</ChargeText> 
+                <ChargeText_under> $10 per month</ChargeText_under> 
                 <ChargeText> No Ads </ChargeText> 
                 <ChargeText> No charge </ChargeText> 
                 <ChargeText> Free Download </ChargeText> 
