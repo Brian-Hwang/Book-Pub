@@ -161,6 +161,12 @@ const MyProfile = styled.img`
   margin-top: 5%;
   margin-left: 20%;
 `;
+const Like = styled.img`
+  height: 80px;
+  width: 80px;
+  margin-right: 2px;
+  margin-top: 2px;
+`;
 const Row = styled.div`
   display: flex;
   flex-direction: row;
@@ -230,7 +236,7 @@ const Box1_sub2_sub1 = styled.div`
   justify-items: center;
   flex-direction: row;
   width: 100%;
-  height: 8%;
+  height: 15%;
   background-color: white;
 `
 
@@ -259,7 +265,8 @@ const Box1_sub2_sub2_sub1 = styled.div`
 `
 
 const Text_channel = styled.div`
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: bold;
   font-family: "NotoSans";
   margin-left: 10px;
   text-align: start;
@@ -279,7 +286,7 @@ const Box1_sub2_sub2_sub2 = styled.div`
 `
 
 const Text_channel_description = styled.div`
-  font-size: 13px;
+  font-size: 15px;
   font-family: "NotoSans";
   margin-left: 10px;
   text-align: start;
@@ -386,7 +393,7 @@ const FirstVideo = styled.div`
 `
 
 const Videotext = styled.div`
-  font-size: 13px;
+  font-size: 16px;
   font-weight: bold;
   font-family: "NotoSans";
   margin-right: 5px;
@@ -495,7 +502,7 @@ function ViewerPage() {
             <Box1_sub2>
               <Box1_sub2_sub1>
                 <Text_Title> [놓치면 안될 하반기 IT이슈 Best 5] </Text_Title>
-                <img style={{ width: "8%" }} src={like} />
+                <Like img src={like} />
               </Box1_sub2_sub1>
               <Box1_sub2_sub2>
                 <Box1_sub2_sub2_sub1>
