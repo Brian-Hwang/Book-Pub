@@ -44,10 +44,10 @@ const Input = styled.input`
   font-size: 16px;
   overflow-wrap: "auto";
   height: 30px;
-  width: 400px;
-  margin-left: 30px;
+  width: 700px;
+  margin-left: 10px;
   outline: none;
-  margin-top: 35px;
+  margin-top: 55px;
 `;
 const SearchButton = styled.button`
   outline: none;
@@ -55,23 +55,11 @@ const SearchButton = styled.button`
   border-radius: 10px;
   width: 40px;
   height: 37px;
-  margin-top: 35px;
+  margin-top: 55px;
   margin-right: 116px;
   margin-left: 20px;
   background-color: #f7f3f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-`;
-
-const Wrapper1 = styled.div`
-  display: flex;
-  align-self: flex-end;
-  flex-direction: row;
-  width: 20%;
-  height: 33px;
-  justify-content: flex-end;
-  margin-top: 15px;
-  margin-right: 15px;
-  overflow: hidden;
 `;
 
 const Text_personal = styled.div`
@@ -99,20 +87,49 @@ const Line = styled.div`
     display: none;
   }
 `;
+
+const Header = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 280px;
+  justify-content: column;
+  align-items: column;
+  overflow: hidden;
+  position: fixed;
+  background-color: white;
+`
+const Wrapper1 = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  margin-left: 70%;
+  height: 33px;
+  margin-top: 15px;
+  margin-right: 15px;
+  overflow: hidden;
+  position: fixed;
+  background-color: white;
+`;
+
+
 const Wrapper2 = styled.div`
   display: flex;
   align-items: center;
-  justify-items: flex-start;
+  justify-items: center;
   flex-direction: row; // 가로
-  width: 100%;
-  height: 100px;
-  margin-top: 20px;
+  width: 50%;
+  margin-left: 25%;
+  height: 200px;
+  margin-top: 50px;
   overflow: hidden;
+  position: fixed;
+  background-color: white;
 `;
 
 const MaskImage_logo = styled.img`
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 300px;
 `;
 
 const Download = styled.img`
@@ -165,8 +182,9 @@ const Wrapper3 = styled.div`
   width: 50%;
   height: 50px;
   justify-content: flex-end;
-  margin-top: 50px;
+  margin-top: 280px;
   overflow: hidden;
+  position: fixed;
 `;
 const Wrapper4 = styled.div`
   display: flex;
@@ -175,6 +193,7 @@ const Wrapper4 = styled.div`
   height: 1000px;
   border-bottom: 1px solid rgba(0, 0, 0, 255);
   overflow: hidden;
+  margin-top: 330px;
 `;
 const Box1 = styled.div`
   display: flex;
@@ -356,6 +375,16 @@ const Video = styled.div`
   margin-bottom: 15px;
 `
 
+const FirstVideo = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column; // 세로
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 15px;
+`
+
 const Videotext = styled.div`
   font-size: 13px;
   font-weight: bold;
@@ -397,7 +426,7 @@ const Text_Comment = styled.div`
   font-size: 20px;
   font-weight: bold;
   font-family: "NotoSans";
-  font-color: grey;
+  color: grey;
   // margin-right: 5px;
   text-align: center;
   width: 100%;
@@ -406,14 +435,10 @@ const Text_Comment = styled.div`
 `
 
 function ViewerPage() {
-  var description_height = document.querySelector(".Wrapper4").offsetHeight;
-  var code_height = document.querySelector(".Wrapper5").offsetHeight;
-  var qna_height = document.querySelector(".Wrapper6").offsetHeight;
-  var comments_height = document.querySelector(".Wrapper7").offsetHeight;
-
   return (
     <>
       <Background>
+        <Header>
         <Wrapper1>
           <Text_personal> My Channel </Text_personal>
           <Line />
@@ -434,52 +459,33 @@ function ViewerPage() {
         <Wrapper3>
           <CategoryButton
             onClick={() =>
-              window.scrollTo({ top: location, behavior: "smooth" })
-            }
-          >
-            Video
+              window.scrollTo( 0, 0 )
+            } >  Video
           </CategoryButton>
-          <CategoryButton
+        <CategoryButton
             onClick={() =>
-              window.scrollTo({
-                top: location - description_height,
-                behavior: "smooth",
-              })
-            }
-          >
-            Description
-          </CategoryButton>
-          <CategoryButton
+              window.scrollTo( 0, 400 )
+            } > Description
+        </CategoryButton>
+        <CategoryButton
             onClick={() =>
-              window.scrollTo({
-                top: location - code_height,
-                behavior: "smooth",
-              })
-            }
-          >
-            Code
-          </CategoryButton>
-          <CategoryButton
+              window.scrollTo( 0, 1000 )
+            } > Code
+        </CategoryButton>
+        <CategoryButton
             onClick={() =>
-              window.scrollTo({
-                top: location - qna_height,
-                behavior: "smooth",
-              })
-            }
-          >
-            QnA
-          </CategoryButton>
-          <CategoryButton
+              window.scrollTo( 0, 1830 )
+            } > QnA
+        </CategoryButton>
+        <CategoryButton
             onClick={() =>
-              window.scrollTo({
-                top: location - comments_height,
-                behavior: "smooth",
-              })
+              window.scrollTo( 0, 2800 )
             }
-          >
-            Comments
+          > Comments
           </CategoryButton>
+          
         </Wrapper3>
+        </Header> 
         <Wrapper4>
           <Box1>
             <Box1_sub1>
@@ -523,7 +529,15 @@ function ViewerPage() {
 
           <Box2>
             <Text_relatedVideos> Related Videos </Text_relatedVideos>
-
+            <AlwaysScrollSection> 
+              <Col> 
+            <FirstVideo>
+              <img style={{ width: "90%" }} src={video3} />
+              <Videotext>
+                {" "}
+                [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
+              </Videotext>
+            </FirstVideo>
             <Video>
               <img style={{ width: "90%" }} src={video3} />
               <Videotext>
@@ -545,13 +559,8 @@ function ViewerPage() {
                 [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
               </Videotext>
             </Video>
-            <Video>
-              <img style={{ width: "90%" }} src={video3} />
-              <Videotext>
-                {" "}
-                [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
-              </Videotext>
-            </Video>
+            </Col>
+            </AlwaysScrollSection>
           </Box2>
         </Wrapper4>
         <Wrapper5>
@@ -572,7 +581,6 @@ function ViewerPage() {
           <Title> Q&A </Title>
 
           <MyProfile img src={myProfile} />
-          <AlwaysScrollSection>
             <Col>
               <Comment icon={User1} name="Kick it" text="I Don't UNDERSTAND" />
               <Row>
@@ -612,31 +620,8 @@ function ViewerPage() {
                 />
               </Row>
 
-              <Comment icon={User1} name="Kick it" text="I Don't UNDERSTAND" />
-              <Row>
-                <Arrow img src={arrow} />
-                <Comment
-                  icon={User2}
-                  name="BG Kim(Business Girl)"
-                  text="Tell me in detail what you don't understand."
-                />
-              </Row>
-
-              <Comment
-                icon={User3}
-                name="FFFFFF"
-                text="I can't compile the development program."
-              />
-              <Row>
-                <Arrow img src={arrow} />
-                <Comment
-                  icon={User2}
-                  name="BG Kim(Business Girl)"
-                  text="Make sure the environment is properly set up."
-                />
-              </Row>
+              
             </Col>
-          </AlwaysScrollSection>
         </Wrapper6>
 
         <Wrapper7>

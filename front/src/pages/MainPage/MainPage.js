@@ -90,7 +90,8 @@ const Text_personal = styled.div`
   font-family: 'NotoSans';
   // margin-right: 5px;
   text-align: center;
-  width: 100%;
+  width: 40%;
+  margin-left: ;
   margin-top: 5px;
 `
 const Line = styled.div`
@@ -137,7 +138,7 @@ const Wrapper3 = styled.div`
 `
 
 const Text_categories = styled.div`
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   font-family: 'NotoSans';
   // margin-right: 5px;
@@ -296,7 +297,7 @@ const Text_right = styled.div`
   margin-top: 20px;
 `
 const Text_center = styled.div`
-  font-size: 30px;
+  font-size: 35px;
   font-weight: bold;
   font-family: 'NotoSans';
   margin-right: 5px;
@@ -361,8 +362,8 @@ const ChargeText_Blue = styled.div`
 `
 
 const Creators = styled.img`
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   margin-top: 20px;
   margin-right: 30px;
 `
@@ -384,8 +385,8 @@ function MainPage() {
             <Text_personal> My Channel </Text_personal>
             <Line />
             <Text_personal> My Page</Text_personal>
-            <Line />
-            <Text_personal> Logout </Text_personal>
+            <Line />`
+            <Text_personal> Logout </Text_personal>`
               </Wrapper1> 
             <Wrapper2> 
               <Row >
@@ -484,7 +485,7 @@ function MainPage() {
               <Wrapper8_sub> 
               <ChargeBox>
                 <Row2> 
-                <ChargeText_Blue > IT's </ChargeText_Blue > 
+                <ChargeText_Blue > IT'S </ChargeText_Blue > 
                 <ChargeText > Basic </ChargeText> 
                 </Row2>
                 
@@ -498,14 +499,14 @@ function MainPage() {
               <ChargeBox>
                 
                 <Row3> 
-                <ChargeText_Blue > IT's </ChargeText_Blue > 
+                <ChargeText_Blue > IT'S </ChargeText_Blue > 
                 <ChargeText> Premium </ChargeText> 
                 </Row3>
                 
                 
                 
                 
-                <ChargeText_under> $10 per month</ChargeText_under> 
+                <ChargeText_under> $3 per month</ChargeText_under> 
                 <ChargeText> No Ads </ChargeText> 
                 <ChargeText> No charge </ChargeText> 
                 <ChargeText> Free Download </ChargeText> 
