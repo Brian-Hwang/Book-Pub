@@ -27,6 +27,7 @@ import down from "../../assets/down.svg";
 import { AlwaysScrollSection } from "./AlwaysScrollSection";
 
 const Background = styled.div`
+  id: "Background";
   background-color: white;
   background-repeat: no-repeat;
   background-position: center top;
@@ -160,6 +161,7 @@ const Col = styled.div`
 `;
 
 const Wrapper3 = styled.div`
+  id: Wrapper3;
   display: flex;
   flex-direction: row; // 가로
   width: 50%;
@@ -389,11 +391,11 @@ const Text_Comment = styled.div`
   margin-bottom: 5%;
 `;
 function ViewerPage() {
-  var location = document.querySelector("#move").offsetTop;
-  var description_height = document.querySelector("Wrapper4").offsetHeight;
-  var code_height = document.querySelector("Wrapper5").offsetHeight;
-  var qna_height = document.querySelector("Wrapper6").offsetHeight;
-  var comments_height = document.querySelector("Wrapper7").offsetHeight;
+  // var location = document.querySelector("#Background").offsetTop;
+  // var description_height = document.querySelector("Wrapper4").offsetHeight;
+  // var code_height = document.querySelector("Wrapper5").offsetHeight;
+  // var qna_height = document.querySelector("Wrapper6").offsetHeight;
+  // var comments_height = document.querySelector("Wrapper7").offsetHeight;
 
   return (
     <>
@@ -415,7 +417,7 @@ function ViewerPage() {
             </SearchButton>
           </Row>
         </Wrapper2>
-        <Wrapper3>
+        {/* <Wrapper3>
           <CategoryButton
             onClick={() =>
               window.scrollTo({ top: location, behavior: "smooth" })
@@ -463,7 +465,7 @@ function ViewerPage() {
           >
             Comments
           </CategoryButton>
-        </Wrapper3>
+        </Wrapper3> */}
         <Wrapper4>
           <Box1>
             <Box1_sub1>
