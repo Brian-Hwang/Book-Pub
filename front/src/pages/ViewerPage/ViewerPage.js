@@ -406,10 +406,21 @@ const Title = styled.div`
   font-weight: bold;
   text-align: left;
   width: 100%;
-  height: 30px;
-  margin-top: 3%;
+  height: 20px;
   margin-left: 3%;
   margin-right: 3%;
+  margin-bottom: 3%;
+  margin-top: -2%;
+
+`
+const TitleBox = styled.div`
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+  height: 30px;
+  margin-top: 5%;
+  border-bottom: 2px solid rgba(0, 0, 0, 255);
 `
 
 const Division = styled.div`
@@ -573,10 +584,14 @@ function ViewerPage() {
         <Wrapper5>
           <Box3>
             <Col>
+            <TitleBox> 
               <Title> packages </Title>
+            </TitleBox>
               <Division> </Division>
               <Download img src={PackageDownload} />
+              <TitleBox> 
               <Title> Code </Title>
+              </TitleBox>
               <Code img src={PackageCode} />
             </Col>
           </Box3>
@@ -585,7 +600,9 @@ function ViewerPage() {
           </Box4>
         </Wrapper5>
         <Wrapper6>
+          <TitleBox> 
           <Title> Q&A </Title>
+          </TitleBox>
 
           <MyProfile img src={myProfile} />
             <Col>
@@ -632,7 +649,9 @@ function ViewerPage() {
         </Wrapper6>
 
         <Wrapper7>
+          <TitleBox> 
           <Title> Comment </Title>
+          </TitleBox>
 
           <MyProfile img src={myProfile} />
           <Col>
