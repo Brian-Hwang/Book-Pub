@@ -193,11 +193,11 @@ const Box1_sub1 = styled.div`
 `;
 const Box1_sub2 = styled.div`
   display: flex;
-
   flex-direction: column;
   width: 100%;
   height: 100%;
 `;
+
 const Text_Title = styled.div`
   font-size: 20px;
   font-weight: bold;
@@ -206,6 +206,7 @@ const Text_Title = styled.div`
   text-align: start;
   width: 100%;
 `;
+
 const Box1_sub2_sub1 = styled.div`
   display: flex;
   align-items: center;
@@ -215,11 +216,11 @@ const Box1_sub2_sub1 = styled.div`
   height: 8%;
   background-color: white;
 `;
+
 const Box1_sub2_sub2 = styled.div`
   display: flex;
   border-top: 2px solid rgba(0, 0, 0, 255);
   border-bottom: 1px solid rgba(0, 0, 0, 255);
-
   align-items: center;
   justify-items: center;
   flex-direction: column;
@@ -227,6 +228,7 @@ const Box1_sub2_sub2 = styled.div`
   height: 100%;
   background-color: white;
 `;
+
 const Box1_sub2_sub2_sub1 = styled.div`
   display: flex;
   margin-left: 20px;
@@ -238,6 +240,7 @@ const Box1_sub2_sub2_sub1 = styled.div`
   height: 8%;
   background-color: white;
 `;
+
 const Text_channel = styled.div`
   font-size: 18px;
   font-family: "NotoSans";
@@ -245,6 +248,7 @@ const Text_channel = styled.div`
   text-align: start;
   width: 100%;
 `;
+
 const Box1_sub2_sub2_sub2 = styled.div`
   display: flex;
   margin-left: 20px;
@@ -256,6 +260,7 @@ const Box1_sub2_sub2_sub2 = styled.div`
   height: 8%;
   background-color: white;
 `;
+
 const Text_channel_description = styled.div`
   font-size: 13px;
   font-family: "NotoSans";
@@ -273,6 +278,7 @@ const Box2 = styled.div`
   height: 100%;
   border: 1px solid rgba(0, 0, 0, 255);
 `;
+
 const Text_relatedVideos = styled.div`
   margin-top: 10px;
   margin-bottom: 20px;
@@ -283,6 +289,7 @@ const Text_relatedVideos = styled.div`
   text-align: center;
   width: 100%;
 `;
+
 const Wrapper5 = styled.div`
   display: flex;
   flex-direction: row;
@@ -290,6 +297,7 @@ const Wrapper5 = styled.div`
   height: 800px;
   overflow: hidden;
 `;
+
 const Box3 = styled.div`
   display: flex;
   flex-direction: column;
@@ -298,12 +306,14 @@ const Box3 = styled.div`
   width: 75%;
   height: 800px;
 `;
+
 const Box4 = styled.div`
   display: flex;
   flex-direction: row;
   width: 25%;
   height: 1000px;
 `;
+
 const Wrapper6 = styled.div`
   display: flex;
   flex-direction: column;
@@ -312,6 +322,7 @@ const Wrapper6 = styled.div`
   height: 1000px;
   overflow: hidden;
 `;
+
 const Wrapper7 = styled.div`
   display: flex;
   flex-direction: column;
@@ -336,6 +347,7 @@ const CategoryButton = styled.button`
   background-color: white;
   outline: 0;
 `;
+
 const Video = styled.div`
   display: flex;
   width: 100%;
@@ -345,6 +357,7 @@ const Video = styled.div`
   margin-top: 10px;
   margin-bottom: 15px;
 `;
+
 const Videotext = styled.div`
   font-size: 13px;
   font-weight: bold;
@@ -364,6 +377,7 @@ const Title = styled.div`
   margin-left: 3%;
   margin-right: 3%;
 `;
+
 const Division = styled.div`
   width: 100%;
   height: 2px;
@@ -379,6 +393,7 @@ const CommentRow = styled.div`
   width: 25%;
   // overflow: hidden;
 `;
+
 const Text_Comment = styled.div`
   font-size: 20px;
   font-weight: bold;
@@ -390,12 +405,12 @@ const Text_Comment = styled.div`
   margin-top: 2%;
   margin-bottom: 5%;
 `;
+
 function ViewerPage() {
-  // var location = document.querySelector("#Background").offsetTop;
-  // var description_height = document.querySelector("Wrapper4").offsetHeight;
-  // var code_height = document.querySelector("Wrapper5").offsetHeight;
-  // var qna_height = document.querySelector("Wrapper6").offsetHeight;
-  // var comments_height = document.querySelector("Wrapper7").offsetHeight;
+  var description_height = document.querySelector(".Wrapper4").offsetHeight;
+  var code_height = document.querySelector(".Wrapper5").offsetHeight;
+  var qna_height = document.querySelector(".Wrapper6").offsetHeight;
+  var comments_height = document.querySelector(".Wrapper7").offsetHeight;
 
   return (
     <>
