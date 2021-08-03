@@ -186,7 +186,7 @@ const Box1_sub1 = styled.div`
 
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 100%
   height: 40%;
 `
 const Box1_sub2 = styled.div`
