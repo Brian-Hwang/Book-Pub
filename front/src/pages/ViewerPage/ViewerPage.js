@@ -27,7 +27,6 @@ import down from "../../assets/down.svg";
 import { AlwaysScrollSection } from "./AlwaysScrollSection";
 
 const Background = styled.div`
-  id: "Background";
   background-color: white;
   background-repeat: no-repeat;
   background-position: center top;
@@ -45,10 +44,10 @@ const Input = styled.input`
   font-size: 16px;
   overflow-wrap: "auto";
   height: 30px;
-  width: 400px;
-  margin-left: 30px;
+  width: 700px;
+  margin-left: 10px;
   outline: none;
-  margin-top: 35px;
+  margin-top: 55px;
 `;
 const SearchButton = styled.button`
   outline: none;
@@ -56,23 +55,11 @@ const SearchButton = styled.button`
   border-radius: 10px;
   width: 40px;
   height: 37px;
-  margin-top: 35px;
+  margin-top: 55px;
   margin-right: 116px;
   margin-left: 20px;
   background-color: #f7f3f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-`;
-
-const Wrapper1 = styled.div`
-  display: flex;
-  align-self: flex-end;
-  flex-direction: row;
-  width: 20%;
-  height: 33px;
-  justify-content: flex-end;
-  margin-top: 15px;
-  margin-right: 15px;
-  overflow: hidden;
 `;
 
 const Text_personal = styled.div`
@@ -100,20 +87,48 @@ const Line = styled.div`
     display: none;
   }
 `;
+
+const Header = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 280px;
+  justify-content: column;
+  align-items: column;
+  overflow: hidden;
+  position: fixed;
+  background-color: white;
+`;
+const Wrapper1 = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  margin-left: 70%;
+  height: 33px;
+  margin-top: 15px;
+  margin-right: 15px;
+  overflow: hidden;
+  position: fixed;
+  background-color: white;
+`;
+
 const Wrapper2 = styled.div`
   display: flex;
   align-items: center;
-  justify-items: flex-start;
+  justify-items: center;
   flex-direction: row; // 가로
-  width: 100%;
-  height: 100px;
-  margin-top: 20px;
+  width: 50%;
+  margin-left: 25%;
+  height: 200px;
+  margin-top: 50px;
   overflow: hidden;
+  position: fixed;
+  background-color: white;
 `;
 
 const MaskImage_logo = styled.img`
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 300px;
 `;
 
 const Download = styled.img`
@@ -145,6 +160,12 @@ const MyProfile = styled.img`
   margin-top: 5%;
   margin-left: 20%;
 `;
+const Like = styled.img`
+  height: 80px;
+  width: 80px;
+  margin-right: 2px;
+  margin-top: 2px;
+`;
 const Row = styled.div`
   display: flex;
   flex-direction: row;
@@ -161,14 +182,14 @@ const Col = styled.div`
 `;
 
 const Wrapper3 = styled.div`
-  id: Wrapper3;
   display: flex;
   flex-direction: row; // 가로
   width: 50%;
   height: 50px;
   justify-content: flex-end;
-  margin-top: 50px;
+  margin-top: 280px;
   overflow: hidden;
+  position: fixed;
 `;
 const Wrapper4 = styled.div`
   display: flex;
@@ -177,6 +198,7 @@ const Wrapper4 = styled.div`
   height: 1000px;
   border-bottom: 1px solid rgba(0, 0, 0, 255);
   overflow: hidden;
+  margin-top: 330px;
 `;
 const Box1 = styled.div`
   display: flex;
@@ -213,7 +235,7 @@ const Box1_sub2_sub1 = styled.div`
   justify-items: center;
   flex-direction: row;
   width: 100%;
-  height: 8%;
+  height: 15%;
   background-color: white;
 `;
 
@@ -242,7 +264,8 @@ const Box1_sub2_sub2_sub1 = styled.div`
 `;
 
 const Text_channel = styled.div`
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: bold;
   font-family: "NotoSans";
   margin-left: 10px;
   text-align: start;
@@ -262,7 +285,7 @@ const Box1_sub2_sub2_sub2 = styled.div`
 `;
 
 const Text_channel_description = styled.div`
-  font-size: 13px;
+  font-size: 15px;
   font-family: "NotoSans";
   margin-left: 10px;
   text-align: start;
@@ -358,8 +381,18 @@ const Video = styled.div`
   margin-bottom: 15px;
 `;
 
+const FirstVideo = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column; // 세로
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 15px;
+`;
+
 const Videotext = styled.div`
-  font-size: 13px;
+  font-size: 16px;
   font-weight: bold;
   font-family: "NotoSans";
   margin-right: 5px;
@@ -372,10 +405,20 @@ const Title = styled.div`
   font-weight: bold;
   text-align: left;
   width: 100%;
-  height: 30px;
-  margin-top: 3%;
+  height: 20px;
   margin-left: 3%;
   margin-right: 3%;
+  margin-bottom: 3%;
+  margin-top: -2%;
+`;
+const TitleBox = styled.div`
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+  height: 30px;
+  margin-top: 5%;
+  border-bottom: 2px solid rgba(0, 0, 0, 255);
 `;
 
 const Division = styled.div`
@@ -407,80 +450,50 @@ const Text_Comment = styled.div`
 `;
 
 function ViewerPage() {
-  // var description_height = document.querySelector(".Wrapper4").offsetHeight;
-  // var code_height = document.querySelector(".Wrapper5").offsetHeight;
-  // var qna_height = document.querySelector(".Wrapper6").offsetHeight;
-  // var comments_height = document.querySelector(".Wrapper7").offsetHeight;
-
   return (
     <>
       <Background>
-        <Wrapper1>
-          <Text_personal> My Channel </Text_personal>
-          <Line />
-          <Text_personal> My Page</Text_personal>
-          <Line />
-          <Text_personal> Logout </Text_personal>
-        </Wrapper1>
-        <Wrapper2>
-          <Row>
-            <MaskImage_logo img src={logo} />
-            <Input></Input>
-            <SearchButton>
+        <Header>
+          <Wrapper1>
+            <Text_personal> My Channel </Text_personal>
+            <Line />
+            <Text_personal> My Page</Text_personal>
+            <Line />
+            <Text_personal> Logout </Text_personal>
+          </Wrapper1>
+          <Wrapper2>
+            <Row>
+              <MaskImage_logo img src={logo} />
+              <Input></Input>
+              <SearchButton>
+                {" "}
+                <img style={{ width: "30px", height: "30px" }} src={Search} />
+              </SearchButton>
+            </Row>
+          </Wrapper2>
+          <Wrapper3>
+            <CategoryButton onClick={() => window.scrollTo(0, 0)}>
               {" "}
-              <img style={{ width: "30px", height: "30px" }} src={Search} />
-            </SearchButton>
-          </Row>
-        </Wrapper2>
-        {/* <Wrapper3>
-          <CategoryButton
-            onClick={() =>
-              window.scrollTo({ top: location, behavior: "smooth" })
-            }
-          >
-            Video
-          </CategoryButton>
-          <CategoryButton
-            onClick={() =>
-              window.scrollTo({
-                top: location - description_height,
-                behavior: "smooth",
-              })
-            }
-          >
-            Description
-          </CategoryButton>
-          <CategoryButton
-            onClick={() =>
-              window.scrollTo({
-                top: location - code_height,
-                behavior: "smooth",
-              })
-            }
-          >
-            Code
-          </CategoryButton>
-          <CategoryButton
-            onClick={() =>
-              window.scrollTo({
-                top: location - qna_height,
-                behavior: "smooth",
-              })
-            }
-          >
-            QnA
-          </CategoryButton>
-          <CategoryButton
-            onClick={() =>
-              window.scrollTo({
-                top: location - comments_height,
-                behavior: "smooth",
-              })
-            }
-          >
-            Comments
-          </CategoryButton>
-        </Wrapper3> */}
+              Video
+            </CategoryButton>
+            <CategoryButton onClick={() => window.scrollTo(0, 400)}>
+              {" "}
+              Description
+            </CategoryButton>
+            <CategoryButton onClick={() => window.scrollTo(0, 1000)}>
+              {" "}
+              Code
+            </CategoryButton>
+            <CategoryButton onClick={() => window.scrollTo(0, 1830)}>
+              {" "}
+              QnA
+            </CategoryButton>
+            <CategoryButton onClick={() => window.scrollTo(0, 2800)}>
+              {" "}
+              Comments
+            </CategoryButton>
+          </Wrapper3>
+        </Header>
         <Wrapper4>
           <Box1>
             <Box1_sub1>
@@ -490,7 +503,7 @@ function ViewerPage() {
             <Box1_sub2>
               <Box1_sub2_sub1>
                 <Text_Title> [놓치면 안될 하반기 IT이슈 Best 5] </Text_Title>
-                <img style={{ width: "8%" }} src={like} />
+                <Like img src={like} />
               </Box1_sub2_sub1>
               <Box1_sub2_sub2>
                 <Box1_sub2_sub2_sub1>
@@ -524,44 +537,51 @@ function ViewerPage() {
 
           <Box2>
             <Text_relatedVideos> Related Videos </Text_relatedVideos>
-
-            <Video>
-              <img style={{ width: "90%" }} src={video3} />
-              <Videotext>
-                {" "}
-                [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
-              </Videotext>
-            </Video>
-            <Video>
-              <img style={{ width: "90%" }} src={video3} />
-              <Videotext>
-                {" "}
-                [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
-              </Videotext>
-            </Video>
-            <Video>
-              <img style={{ width: "90%" }} src={video3} />
-              <Videotext>
-                {" "}
-                [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
-              </Videotext>
-            </Video>
-            <Video>
-              <img style={{ width: "90%" }} src={video3} />
-              <Videotext>
-                {" "}
-                [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
-              </Videotext>
-            </Video>
+            <AlwaysScrollSection>
+              <Col>
+                <FirstVideo>
+                  <img style={{ width: "90%" }} src={video3} />
+                  <Videotext>
+                    {" "}
+                    [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
+                  </Videotext>
+                </FirstVideo>
+                <Video>
+                  <img style={{ width: "90%" }} src={video3} />
+                  <Videotext>
+                    {" "}
+                    [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
+                  </Videotext>
+                </Video>
+                <Video>
+                  <img style={{ width: "90%" }} src={video3} />
+                  <Videotext>
+                    {" "}
+                    [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
+                  </Videotext>
+                </Video>
+                <Video>
+                  <img style={{ width: "90%" }} src={video3} />
+                  <Videotext>
+                    {" "}
+                    [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
+                  </Videotext>
+                </Video>
+              </Col>
+            </AlwaysScrollSection>
           </Box2>
         </Wrapper4>
         <Wrapper5>
           <Box3>
             <Col>
-              <Title> packages </Title>
+              <TitleBox>
+                <Title> packages </Title>
+              </TitleBox>
               <Division> </Division>
               <Download img src={PackageDownload} />
-              <Title> Code </Title>
+              <TitleBox>
+                <Title> Code </Title>
+              </TitleBox>
               <Code img src={PackageCode} />
             </Col>
           </Box3>
@@ -570,78 +590,56 @@ function ViewerPage() {
           </Box4>
         </Wrapper5>
         <Wrapper6>
-          <Title> Q&A </Title>
+          <TitleBox>
+            <Title> Q&A </Title>
+          </TitleBox>
 
           <MyProfile img src={myProfile} />
-          <AlwaysScrollSection>
-            <Col>
-              <Comment icon={User1} name="Kick it" text="I Don't UNDERSTAND" />
-              <Row>
-                <Arrow img src={arrow} />
-                <Comment
-                  icon={User2}
-                  name="BG Kim(Business Girl)"
-                  text="Tell me in detail what you don't understand."
-                />
-              </Row>
-
+          <Col>
+            <Comment icon={User1} name="Kick it" text="I Don't UNDERSTAND" />
+            <Row>
+              <Arrow img src={arrow} />
               <Comment
-                icon={User3}
-                name="FFFFFF"
-                text="I can't compile the development program."
+                icon={User2}
+                name="BG Kim(Business Girl)"
+                text="Tell me in detail what you don't understand."
               />
-              <Row>
-                <Arrow img src={arrow} />
-                <Comment
-                  icon={User2}
-                  name="BG Kim(Business Girl)"
-                  text="Make sure the environment is properly set up."
-                />
-              </Row>
+            </Row>
 
+            <Comment
+              icon={User3}
+              name="FFFFFF"
+              text="I can't compile the development program."
+            />
+            <Row>
+              <Arrow img src={arrow} />
               <Comment
-                icon={User4}
-                name="KittyBoy"
-                text="The video keeps stopping."
+                icon={User2}
+                name="BG Kim(Business Girl)"
+                text="Make sure the environment is properly set up."
               />
-              <Row>
-                <Arrow img src={arrow} />
-                <Comment
-                  icon={User2}
-                  name="BG Kim(Business Girl)"
-                  text="Check the Internet environment."
-                />
-              </Row>
+            </Row>
 
-              <Comment icon={User1} name="Kick it" text="I Don't UNDERSTAND" />
-              <Row>
-                <Arrow img src={arrow} />
-                <Comment
-                  icon={User2}
-                  name="BG Kim(Business Girl)"
-                  text="Tell me in detail what you don't understand."
-                />
-              </Row>
-
+            <Comment
+              icon={User4}
+              name="KittyBoy"
+              text="The video keeps stopping."
+            />
+            <Row>
+              <Arrow img src={arrow} />
               <Comment
-                icon={User3}
-                name="FFFFFF"
-                text="I can't compile the development program."
+                icon={User2}
+                name="BG Kim(Business Girl)"
+                text="Check the Internet environment."
               />
-              <Row>
-                <Arrow img src={arrow} />
-                <Comment
-                  icon={User2}
-                  name="BG Kim(Business Girl)"
-                  text="Make sure the environment is properly set up."
-                />
-              </Row>
-            </Col>
-          </AlwaysScrollSection>
+            </Row>
+          </Col>
         </Wrapper6>
 
         <Wrapper7>
-          <Title> Comment </Title>
+          <TitleBox>
+            <Title> Comment </Title>
+          </TitleBox>
 
           <MyProfile img src={myProfile} />
           <Col>

@@ -29,14 +29,14 @@ const Box=styled.div`
 `
 
 const Name = styled.div`
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   text-align: left;
   width: 80%;
   
 `
 const Comm = styled.div`
-  font-size: 15px;
+  font-size: 18px;
   text-align: left;
   width: 100%;
 `
