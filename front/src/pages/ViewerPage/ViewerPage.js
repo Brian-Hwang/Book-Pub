@@ -24,6 +24,19 @@ import myProfile from "../../assets/MyProfile.svg";
 import up from "../../assets/up.svg";
 import down from "../../assets/down.svg";
 
+import Project1 from "../../assets/Project1.svg";
+import Project2 from "../../assets/Project2.svg";
+import Project3 from "../../assets/Project3.svg";
+import Project4 from "../../assets/Project4.svg";
+import Project5 from "../../assets/Project5.svg";
+import Project6 from "../../assets/Project6.svg";
+
+import information1 from "../../assets/information1.svg";
+import information2 from "../../assets/information2.svg";
+import information3 from "../../assets/information3.svg";
+import information4 from "../../assets/information4.svg";
+import information5 from "../../assets/information5.svg";
+
 import { AlwaysScrollSection } from "./AlwaysScrollSection";
 
 const Background = styled.div`
@@ -158,7 +171,7 @@ const MyProfile = styled.img`
   height: 100px;
   width: 800px;
   margin-top: 5%;
-  margin-left: 20%;
+  margin-left: 10%;
 `;
 const Like = styled.img`
   height: 80px;
@@ -303,15 +316,38 @@ const Box2 = styled.div`
 `;
 
 const Text_relatedVideos = styled.div`
-  margin-top: 10px;
+  margin-top: 12px;
   margin-bottom: 20px;
-  font-size: 23px;
+  font-size: 25px;
   font-weight: bold;
   font-family: "NotoSans";
   margin-left: 10px;
   text-align: center;
   width: 100%;
 `;
+const Wrapper_bottom = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 2600px;
+  overflow: hidden;
+`;
+const Wrapper_left = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: 2600px;
+  overflow: hidden;
+  border: 2px solid rgba(0, 0, 0, 255);
+`;
+const Wrapper_right = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 2600px;
+  overflow: hidden;
+`;
+
 
 const Wrapper5 = styled.div`
   display: flex;
@@ -326,15 +362,15 @@ const Box3 = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 75%;
+  width: 100%;
   height: 800px;
 `;
 
 const Box4 = styled.div`
   display: flex;
   flex-direction: row;
-  width: 25%;
-  height: 1000px;
+  width: 100%;
+  height: 890px;
 `;
 
 const Wrapper6 = styled.div`
@@ -345,6 +381,78 @@ const Wrapper6 = styled.div`
   height: 1000px;
   overflow: hidden;
 `;
+const Wrapper6_right = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+  height: 1130px;
+  overflow: hidden;
+  border-top: 2px solid rgba(0, 0, 0, 255);
+  border-bottom: 2px solid rgba(0, 0, 0, 255);
+`;
+const ProjectBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  margin-top: 30px;
+`;
+
+const ProjectText = styled.div`
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 25px;
+  text-align: start;
+  font-weight: bold;
+  width: 70%;
+`;
+
+const Profile= styled.img`
+  height: 70px;
+  width: 70px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-left: 20px;
+`
+
+const InforBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  margin-top: 20px;
+`;
+
+const InforText_Blue = styled.div`
+  font-size: 18px;
+  margin-left: 20px;
+  font-weight: bold;
+  margin-top: 35px;
+  text-align: start;
+  color: #4b89dc;
+  width: 10%;
+`;
+const InforText = styled.div`
+  font-size: 18px;
+  margin-left: 3px;
+  margin-top: 35px;
+  font-weight: bold;
+  text-align: start;
+`;
+
+const Infor= styled.img`
+  height: 100px;
+  width: 100px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-left: 20px;
+`
+
 
 const Wrapper7 = styled.div`
   display: flex;
@@ -352,6 +460,15 @@ const Wrapper7 = styled.div`
   width: 100%;
   height: 800px;
   overflow: hidden;
+`;
+
+const Wrapper7_right = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  border-bottom: 2px solid rgba(0, 0, 0, 255);
 `;
 
 const CategoryButton = styled.button`
@@ -571,6 +688,8 @@ function ViewerPage() {
             </AlwaysScrollSection>
           </Box2>
         </Wrapper4>
+        <Wrapper_bottom> 
+        <Wrapper_left>
         <Wrapper5>
           <Box3>
             <Col>
@@ -585,14 +704,11 @@ function ViewerPage() {
               <Code img src={PackageCode} />
             </Col>
           </Box3>
-          <Box4>
-            <PkAds img src={PackageAds} />
-          </Box4>
         </Wrapper5>
         <Wrapper6>
           <TitleBox>
             <Title> Q&A </Title>
-          </TitleBox>
+          </TitleBox> 
 
           <MyProfile img src={myProfile} />
           <Col>
@@ -670,6 +786,70 @@ function ViewerPage() {
             </CommentRow>
           </Col>
         </Wrapper7>
+        </Wrapper_left> 
+        <Wrapper_right> 
+          <Box4>
+            <PkAds img src={PackageAds} />
+          </Box4>
+          <Wrapper6_right> 
+            <Text_relatedVideos> Related Projects </Text_relatedVideos>
+            <ProjectBox> 
+              <Profile img src={Project1}/>
+              <ProjectText> Java Study recruitment. </ProjectText>
+            </ProjectBox>
+            <ProjectBox> 
+              <Profile img src={Project2}/>
+              <ProjectText> 2023 Hackathon Participants Recruitment </ProjectText>
+            </ProjectBox>
+            <ProjectBox> 
+              <Profile img src={Project3}/>
+              <ProjectText> Computer Beginner Learning </ProjectText>
+            </ProjectBox>
+            <ProjectBox> 
+              <Profile img src={Project4}/>
+              <ProjectText> C language basic study </ProjectText>
+            </ProjectBox>
+            <ProjectBox> 
+              <Profile img src={Project5}/>
+              <ProjectText> Simple game development recruitment </ProjectText>
+            </ProjectBox>
+            <ProjectBox> 
+              <Profile img src={Project6}/>
+              <ProjectText> A study with a 20-year experience as a mentor. </ProjectText>
+            </ProjectBox>
+          </Wrapper6_right>
+          <Wrapper7_right> 
+          <Text_relatedVideos> Information </Text_relatedVideos>
+          <InforBox>
+            <Infor img src={information1}/>
+            <InforText_Blue> IT'S </InforText_Blue>
+            <InforText> Mail Address</InforText>
+          </InforBox>
+          <InforBox>
+            <Infor img src={information2}/>
+            <InforText_Blue> IT'S </InforText_Blue>
+            <InforText> Youtube</InforText>
+          </InforBox>
+          <InforBox>
+            <Infor img src={information3}/>
+            <InforText_Blue> IT'S </InforText_Blue>
+            <InforText> Facebook</InforText>
+          </InforBox>
+          <InforBox>
+            <Infor img src={information4}/>
+            <InforText_Blue> IT'S </InforText_Blue>
+            <InforText> Instagram</InforText>
+          </InforBox>
+          <InforBox>
+            <Infor img src={information5}/>
+            <InforText_Blue> IT'S </InforText_Blue>
+            <InforText> Kakaotalk</InforText>
+          </InforBox>
+
+          </Wrapper7_right>
+
+        </Wrapper_right>
+        </Wrapper_bottom>
       </Background>
     </>
   );
