@@ -376,11 +376,12 @@ const Creators = styled.img`
   width: 150px;
   height: 150px;
   margin-top: 20px;
-  margin-right: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
 `;
 
 const Sponors = styled.img`
-  height: 130px;
+  height: 100px;
   margin-top: 80px;
   margin-right: 60px;
 `;
