@@ -398,7 +398,7 @@ const Text_Comment = styled.div`
   font-size: 20px;
   font-weight: bold;
   font-family: "NotoSans";
-  font-color: grey;
+  color: grey;
   // margin-right: 5px;
   text-align: center;
   width: 100%;
@@ -407,10 +407,10 @@ const Text_Comment = styled.div`
 `;
 
 function ViewerPage() {
-  var description_height = document.querySelector(".Wrapper4").offsetHeight;
-  var code_height = document.querySelector(".Wrapper5").offsetHeight;
-  var qna_height = document.querySelector(".Wrapper6").offsetHeight;
-  var comments_height = document.querySelector(".Wrapper7").offsetHeight;
+  // var description_height = document.querySelector(".Wrapper4").offsetHeight;
+  // var code_height = document.querySelector(".Wrapper5").offsetHeight;
+  // var qna_height = document.querySelector(".Wrapper6").offsetHeight;
+  // var comments_height = document.querySelector(".Wrapper7").offsetHeight;
 
   return (
     <>
