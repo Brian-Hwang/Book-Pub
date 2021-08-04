@@ -167,7 +167,7 @@ const Wrapper5 = styled.div`
   align-items: center;
   justify-items: center;
   flex-direction: column; // 가로
-  margin-top: 100px;
+  margin-top: 200px;
   width: 100%;
   height: 200px;
 `
