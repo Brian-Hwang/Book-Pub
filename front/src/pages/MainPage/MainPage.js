@@ -251,12 +251,11 @@ const Wrapper8 = styled.div`
 `;
 const Wrapper8_sub = styled.div`
   display: flex;
-  align-items: center;
-  justify-items: center;
-  text-align: center;
+  align-items: flex-center;
+  justify-items: flex-center;
+  // text-align: center;
   flex-direction: row; // 가로
-  width: 60%;
-  height: 900px;
+  width: 40%;
 `;
 
 const Row = styled.div`
@@ -273,14 +272,14 @@ const Row2 = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 30%;
+  width: 100%;
   // overflow: hidden;
 `;
 const Row3 = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 40%;
+  width: 100%;
   // overflow: hidden;
 `;
 const Title = styled.div`
@@ -326,11 +325,10 @@ const Viewmore = styled.div`
 `;
 const ChargeBox = styled.div`
   display: flex;
-  align-items: center;
-  justify-items: center;
+  align-items: flex-center;
+  justify-items: flex-center;
   flex-direction: column; // 가로
   width: 50%;
-  height: 95%;
 `;
 
 const ChargeText = styled.div`
@@ -340,17 +338,18 @@ const ChargeText = styled.div`
   font-family: "NotoSans";
   margin-right: 5px;
   text-align: start;
-  width: 100%;
+  width: 50%;
   margin-top: 5px;
 `;
 
 const ChargeText_under = styled.div`
+  align-self: center;
   font-size: 20px;
   font-weight: bold;
   font-family: "NotoSans";
   margin-right: 5px;
-  text-align: center;
-  width: 100%;
+  text-align: start;
+  width: 50%;
   margin-top: 20px;
   text-decoration: underline;
 `;
@@ -360,9 +359,8 @@ const ChargeText_Blue = styled.div`
   color: #4b89dc;
   font-weight: bold;
   font-family: "NotoSans";
-  margin-right: 5px;
   text-align: center;
-  width: 100%;
+  width: 20%;
   margin-top: 5px;
 `;
 
@@ -515,6 +513,7 @@ function MainPage() {
               <ChargeText>• Paid Download </ChargeText>
               <ChargeText> ... </ChargeText>
             </ChargeBox>
+
             <ChargeBox>
               <Row3>
                 <ChargeText_Blue> IT'S </ChargeText_Blue>
