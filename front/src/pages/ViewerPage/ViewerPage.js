@@ -98,7 +98,7 @@ const Header = styled.div`
   overflow: hidden;
   position: fixed;
   background-color: white;
-`
+`;
 const Wrapper1 = styled.div`
   display: flex;
   flex-direction: row;
@@ -111,7 +111,6 @@ const Wrapper1 = styled.div`
   position: fixed;
   background-color: white;
 `;
-
 
 const Wrapper2 = styled.div`
   display: flex;
@@ -213,13 +212,13 @@ const Box1_sub1 = styled.div`
   flex-direction: row;
   width: 100%
   height: 40%;
-`
+`;
 const Box1_sub2 = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-`
+`;
 
 const Text_Title = styled.div`
   font-size: 20px;
@@ -228,7 +227,7 @@ const Text_Title = styled.div`
   margin-left: 10px;
   text-align: start;
   width: 100%;
-`
+`;
 
 const Box1_sub2_sub1 = styled.div`
   display: flex;
@@ -238,7 +237,7 @@ const Box1_sub2_sub1 = styled.div`
   width: 100%;
   height: 15%;
   background-color: white;
-`
+`;
 
 const Box1_sub2_sub2 = styled.div`
   display: flex;
@@ -250,7 +249,7 @@ const Box1_sub2_sub2 = styled.div`
   width: 100%;
   height: 100%;
   background-color: white;
-`
+`;
 
 const Box1_sub2_sub2_sub1 = styled.div`
   display: flex;
@@ -262,7 +261,7 @@ const Box1_sub2_sub2_sub1 = styled.div`
   width: 100%;
   height: 8%;
   background-color: white;
-`
+`;
 
 const Text_channel = styled.div`
   font-size: 22px;
@@ -271,7 +270,7 @@ const Text_channel = styled.div`
   margin-left: 10px;
   text-align: start;
   width: 100%;
-`
+`;
 
 const Box1_sub2_sub2_sub2 = styled.div`
   display: flex;
@@ -283,7 +282,7 @@ const Box1_sub2_sub2_sub2 = styled.div`
   width: 100%;
   height: 8%;
   background-color: white;
-`
+`;
 
 const Text_channel_description = styled.div`
   font-size: 15px;
@@ -291,7 +290,7 @@ const Text_channel_description = styled.div`
   margin-left: 10px;
   text-align: start;
   width: 100%;
-`
+`;
 
 const Box2 = styled.div`
   display: flex;
@@ -301,7 +300,7 @@ const Box2 = styled.div`
   width: 30%;
   height: 100%;
   border: 1px solid rgba(0, 0, 0, 255);
-`
+`;
 
 const Text_relatedVideos = styled.div`
   margin-top: 10px;
@@ -312,7 +311,7 @@ const Text_relatedVideos = styled.div`
   margin-left: 10px;
   text-align: center;
   width: 100%;
-`
+`;
 
 const Wrapper5 = styled.div`
   display: flex;
@@ -320,7 +319,7 @@ const Wrapper5 = styled.div`
   width: 100%;
   height: 800px;
   overflow: hidden;
-`
+`;
 
 const Box3 = styled.div`
   display: flex;
@@ -329,14 +328,14 @@ const Box3 = styled.div`
   align-items: flex-start;
   width: 75%;
   height: 800px;
-`
+`;
 
 const Box4 = styled.div`
   display: flex;
   flex-direction: row;
   width: 25%;
   height: 1000px;
-`
+`;
 
 const Wrapper6 = styled.div`
   display: flex;
@@ -345,7 +344,7 @@ const Wrapper6 = styled.div`
   width: 100%;
   height: 1000px;
   overflow: hidden;
-`
+`;
 
 const Wrapper7 = styled.div`
   display: flex;
@@ -353,7 +352,7 @@ const Wrapper7 = styled.div`
   width: 100%;
   height: 800px;
   overflow: hidden;
-`
+`;
 
 const CategoryButton = styled.button`
   display: flex;
@@ -370,7 +369,7 @@ const CategoryButton = styled.button`
   color: black;
   background-color: white;
   outline: 0;
-`
+`;
 
 const Video = styled.div`
   display: flex;
@@ -380,7 +379,7 @@ const Video = styled.div`
   justify-content: center;
   margin-top: 10px;
   margin-bottom: 15px;
-`
+`;
 
 const FirstVideo = styled.div`
   display: flex;
@@ -390,7 +389,7 @@ const FirstVideo = styled.div`
   justify-content: center;
   margin-top: 100px;
   margin-bottom: 15px;
-`
+`;
 
 const Videotext = styled.div`
   font-size: 16px;
@@ -399,7 +398,7 @@ const Videotext = styled.div`
   margin-right: 5px;
   text-align: center;
   width: 100%;
-`
+`;
 
 const Title = styled.div`
   font-size: 30px;
@@ -411,8 +410,7 @@ const Title = styled.div`
   margin-right: 3%;
   margin-bottom: 3%;
   margin-top: -2%;
-
-`
+`;
 const TitleBox = styled.div`
   font-size: 30px;
   font-weight: bold;
@@ -421,14 +419,13 @@ const TitleBox = styled.div`
   height: 30px;
   margin-top: 5%;
   border-bottom: 2px solid rgba(0, 0, 0, 255);
-`
+`;
 
 const Division = styled.div`
   width: 100%;
   height: 2px;
   color: black;
-`
-
+`;
 
 const CommentRow = styled.div`
   display: flex;
@@ -438,7 +435,7 @@ const CommentRow = styled.div`
   align-items: flex-start;
   width: 25%;
   // overflow: hidden;
-`
+`;
 
 const Text_Comment = styled.div`
   font-size: 20px;
@@ -450,60 +447,53 @@ const Text_Comment = styled.div`
   width: 100%;
   margin-top: 2%;
   margin-bottom: 5%;
-`
+`;
 
 function ViewerPage() {
   return (
     <>
       <Background>
         <Header>
-        <Wrapper1>
-          <Text_personal> My Channel </Text_personal>
-          <Line />
-          <Text_personal> My Page</Text_personal>
-          <Line />
-          <Text_personal> Logout </Text_personal>
-        </Wrapper1>
-        <Wrapper2>
-          <Row>
-            <MaskImage_logo img src={logo} />
-            <Input></Input>
-            <SearchButton>
+          <Wrapper1>
+            <Text_personal> My Channel </Text_personal>
+            <Line />
+            <Text_personal> My Page</Text_personal>
+            <Line />
+            <Text_personal> Logout </Text_personal>
+          </Wrapper1>
+          <Wrapper2>
+            <Row>
+              <MaskImage_logo img src={logo} />
+              <Input></Input>
+              <SearchButton>
+                {" "}
+                <img style={{ width: "30px", height: "30px" }} src={Search} />
+              </SearchButton>
+            </Row>
+          </Wrapper2>
+          <Wrapper3>
+            <CategoryButton onClick={() => window.scrollTo(0, 0)}>
               {" "}
-              <img style={{ width: "30px", height: "30px" }} src={Search} />
-            </SearchButton>
-          </Row>
-        </Wrapper2>
-        <Wrapper3>
-          <CategoryButton
-            onClick={() =>
-              window.scrollTo( 0, 0 )
-            } >  Video
-          </CategoryButton>
-        <CategoryButton
-            onClick={() =>
-              window.scrollTo( 0, 400 )
-            } > Description
-        </CategoryButton>
-        <CategoryButton
-            onClick={() =>
-              window.scrollTo( 0, 1000 )
-            } > Code
-        </CategoryButton>
-        <CategoryButton
-            onClick={() =>
-              window.scrollTo( 0, 1830 )
-            } > QnA
-        </CategoryButton>
-        <CategoryButton
-            onClick={() =>
-              window.scrollTo( 0, 2800 )
-            }
-          > Comments
-          </CategoryButton>
-          
-        </Wrapper3>
-        </Header> 
+              Video
+            </CategoryButton>
+            <CategoryButton onClick={() => window.scrollTo(0, 400)}>
+              {" "}
+              Description
+            </CategoryButton>
+            <CategoryButton onClick={() => window.scrollTo(0, 1000)}>
+              {" "}
+              Code
+            </CategoryButton>
+            <CategoryButton onClick={() => window.scrollTo(0, 1830)}>
+              {" "}
+              QnA
+            </CategoryButton>
+            <CategoryButton onClick={() => window.scrollTo(0, 2800)}>
+              {" "}
+              Comments
+            </CategoryButton>
+          </Wrapper3>
+        </Header>
         <Wrapper4>
           <Box1>
             <Box1_sub1>
@@ -547,50 +537,50 @@ function ViewerPage() {
 
           <Box2>
             <Text_relatedVideos> Related Videos </Text_relatedVideos>
-            <AlwaysScrollSection> 
-              <Col> 
-            <FirstVideo>
-              <img style={{ width: "90%" }} src={video3} />
-              <Videotext>
-                {" "}
-                [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
-              </Videotext>
-            </FirstVideo>
-            <Video>
-              <img style={{ width: "90%" }} src={video3} />
-              <Videotext>
-                {" "}
-                [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
-              </Videotext>
-            </Video>
-            <Video>
-              <img style={{ width: "90%" }} src={video3} />
-              <Videotext>
-                {" "}
-                [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
-              </Videotext>
-            </Video>
-            <Video>
-              <img style={{ width: "90%" }} src={video3} />
-              <Videotext>
-                {" "}
-                [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
-              </Videotext>
-            </Video>
-            </Col>
+            <AlwaysScrollSection>
+              <Col>
+                <FirstVideo>
+                  <img style={{ width: "90%" }} src={video3} />
+                  <Videotext>
+                    {" "}
+                    [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
+                  </Videotext>
+                </FirstVideo>
+                <Video>
+                  <img style={{ width: "90%" }} src={video3} />
+                  <Videotext>
+                    {" "}
+                    [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
+                  </Videotext>
+                </Video>
+                <Video>
+                  <img style={{ width: "90%" }} src={video3} />
+                  <Videotext>
+                    {" "}
+                    [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
+                  </Videotext>
+                </Video>
+                <Video>
+                  <img style={{ width: "90%" }} src={video3} />
+                  <Videotext>
+                    {" "}
+                    [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
+                  </Videotext>
+                </Video>
+              </Col>
             </AlwaysScrollSection>
           </Box2>
         </Wrapper4>
         <Wrapper5>
           <Box3>
             <Col>
-            <TitleBox> 
-              <Title> packages </Title>
-            </TitleBox>
+              <TitleBox>
+                <Title> packages </Title>
+              </TitleBox>
               <Division> </Division>
               <Download img src={PackageDownload} />
-              <TitleBox> 
-              <Title> Code </Title>
+              <TitleBox>
+                <Title> Code </Title>
               </TitleBox>
               <Code img src={PackageCode} />
             </Col>
@@ -600,57 +590,55 @@ function ViewerPage() {
           </Box4>
         </Wrapper5>
         <Wrapper6>
-          <TitleBox> 
-          <Title> Q&A </Title>
+          <TitleBox>
+            <Title> Q&A </Title>
           </TitleBox>
 
           <MyProfile img src={myProfile} />
-            <Col>
-              <Comment icon={User1} name="Kick it" text="I Don't UNDERSTAND" />
-              <Row>
-                <Arrow img src={arrow} />
-                <Comment
-                  icon={User2}
-                  name="BG Kim(Business Girl)"
-                  text="Tell me in detail what you don't understand."
-                />
-              </Row>
-
+          <Col>
+            <Comment icon={User1} name="Kick it" text="I Don't UNDERSTAND" />
+            <Row>
+              <Arrow img src={arrow} />
               <Comment
-                icon={User3}
-                name="FFFFFF"
-                text="I can't compile the development program."
+                icon={User2}
+                name="BG Kim(Business Girl)"
+                text="Tell me in detail what you don't understand."
               />
-              <Row>
-                <Arrow img src={arrow} />
-                <Comment
-                  icon={User2}
-                  name="BG Kim(Business Girl)"
-                  text="Make sure the environment is properly set up."
-                />
-              </Row>
+            </Row>
 
+            <Comment
+              icon={User3}
+              name="FFFFFF"
+              text="I can't compile the development program."
+            />
+            <Row>
+              <Arrow img src={arrow} />
               <Comment
-                icon={User4}
-                name="KittyBoy"
-                text="The video keeps stopping."
+                icon={User2}
+                name="BG Kim(Business Girl)"
+                text="Make sure the environment is properly set up."
               />
-              <Row>
-                <Arrow img src={arrow} />
-                <Comment
-                  icon={User2}
-                  name="BG Kim(Business Girl)"
-                  text="Check the Internet environment."
-                />
-              </Row>
+            </Row>
 
-              
-            </Col>
+            <Comment
+              icon={User4}
+              name="KittyBoy"
+              text="The video keeps stopping."
+            />
+            <Row>
+              <Arrow img src={arrow} />
+              <Comment
+                icon={User2}
+                name="BG Kim(Business Girl)"
+                text="Check the Internet environment."
+              />
+            </Row>
+          </Col>
         </Wrapper6>
 
         <Wrapper7>
-          <TitleBox> 
-          <Title> Comment </Title>
+          <TitleBox>
+            <Title> Comment </Title>
           </TitleBox>
 
           <MyProfile img src={myProfile} />
