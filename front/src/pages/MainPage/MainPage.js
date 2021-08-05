@@ -338,11 +338,11 @@ const ChargeText = styled.div`
   font-family: "NotoSans";
   margin-right: 5px;
   text-align: start;
-  width: 50%;
+  width: 80%;
   margin-top: 5px;
+  margin-left: 85px;
 `;
-
-const ChargeText_under = styled.div`
+const ChargeText_title = styled.div`
   align-self: center;
   font-size: 20px;
   font-weight: bold;
@@ -350,7 +350,18 @@ const ChargeText_under = styled.div`
   margin-right: 5px;
   text-align: start;
   width: 50%;
+  margin-top: 5px;
+`;
+const ChargeText_under = styled.div`
+  align-self: center;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "NotoSans";
+  margin-right: 5px;
+  text-align: start;
+  width: 80%;
   margin-top: 20px;
+  margin-left: 85px;
   text-decoration: underline;
 `;
 
@@ -505,7 +516,7 @@ function MainPage() {
             <ChargeBox>
               <Row2>
                 <ChargeText_Blue> IT'S </ChargeText_Blue>
-                <ChargeText> Basic </ChargeText>
+                <ChargeText_title> Basic </ChargeText_title>
               </Row2>
 
               <ChargeText_under>• Free</ChargeText_under>
@@ -518,7 +529,7 @@ function MainPage() {
             <ChargeBox>
               <Row3>
                 <ChargeText_Blue> IT'S </ChargeText_Blue>
-                <ChargeText> Premium </ChargeText>
+                <ChargeText_title> Premium </ChargeText_title>
               </Row3>
 
               <ChargeText_under>• $3 per month</ChargeText_under>

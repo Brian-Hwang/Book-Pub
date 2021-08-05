@@ -6,9 +6,12 @@ import logo from "../../assets/Logo.svg";
 import Search from "../../assets/search.svg";
 import like from "../../assets/like.svg";
 import video1 from "../../assets/video1.svg";
-import profile from "../../assets/profile.svg";
+import video2 from "../../assets/video2.svg";
 import video3 from "../../assets/video3.svg";
+import video4 from "../../assets/video4.svg";
 
+
+import profile from "../../assets/profile.svg";
 import Comment from "./Comment";
 
 import PackageAds from "../../assets/PackageAds.svg";
@@ -504,7 +507,7 @@ const FirstVideo = styled.div`
   flex-direction: column; // 세로
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 10px;
   margin-bottom: 15px;
 `;
 
@@ -657,28 +660,28 @@ function ViewerPage() {
             <AlwaysScrollSection>
               <Col>
                 <FirstVideo>
-                  <img style={{ width: "90%" }} src={video3} />
+                  <img style={{ width: "90%" }} src={video1} />
                   <Videotext>
                     {" "}
-                    [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
+                    IT시장의 트렌드 분석{" "}
                   </Videotext>
                 </FirstVideo>
                 <Video>
-                  <img style={{ width: "90%" }} src={video3} />
+                  <img style={{ width: "90%" }} src={video2} />
                   <Videotext>
                     {" "}
-                    [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
+                    하루만에 웹 사이트 만들기[완결판]{" "}
                   </Videotext>
                 </Video>
                 <Video>
                   <img style={{ width: "90%" }} src={video3} />
                   <Videotext>
                     {" "}
-                    [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
+                    [Kids] 과학의 날 축하 영상{" "}
                   </Videotext>
                 </Video>
                 <Video>
-                  <img style={{ width: "90%" }} src={video3} />
+                  <img style={{ width: "90%" }} src={video4} />
                   <Videotext>
                     {" "}
                     [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
