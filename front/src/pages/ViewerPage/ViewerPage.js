@@ -40,6 +40,8 @@ import information3 from "../../assets/information3.svg";
 import information4 from "../../assets/information4.svg";
 import information5 from "../../assets/information5.svg";
 
+import ReactPlayer from "react-player";
+
 import { AlwaysScrollSection } from "./AlwaysScrollSection";
 
 const Background = styled.div`
@@ -223,11 +225,9 @@ const Box1 = styled.div`
   height: 1000px;
 `;
 const Box1_sub1 = styled.div`
-
   display: flex;
   flex-direction: row;
-  width: 100%
-  height: 40%;
+  width: 100%;
 `;
 const Box1_sub2 = styled.div`
   display: flex;
@@ -617,7 +617,12 @@ function ViewerPage() {
         <Wrapper4>
           <Box1>
             <Box1_sub1>
-              <img style={{ height: "100%", width: "100%" }} src={video1} />
+              <ReactPlayer
+                url="https://www.youtube.com/watch?v=ug50zmP9I7s"
+                width="100%"
+                height="600px"
+                controls={true}
+              />
             </Box1_sub1>
 
             <Box1_sub2>
