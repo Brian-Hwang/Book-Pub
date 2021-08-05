@@ -1,7 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import YouTube from "react-youtube";
 import logo from "../../assets/Logo.svg";
 import Search from "../../assets/search.svg";
 import intro from "../../assets/intro.svg";
