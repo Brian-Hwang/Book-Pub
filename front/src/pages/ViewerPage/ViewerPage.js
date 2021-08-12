@@ -601,7 +601,7 @@ function ViewerPage() {
               {" "}
               Description
             </CategoryButton>
-            <CategoryButton onClick={() => window.scrollTo(0, 1000)}>
+            <CategoryButton onClick={() => window.scrollTo(0, 1200)}>
               {" "}
               Code
             </CategoryButton>
