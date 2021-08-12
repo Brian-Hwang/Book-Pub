@@ -11,6 +11,7 @@ import video3 from "../../assets/video3.svg";
 import video4 from "../../assets/video4.svg";
 
 
+
 import profile from "../../assets/profile.svg";
 import Comment from "./Comment";
 
@@ -618,7 +619,7 @@ function ViewerPage() {
           <Box1>
             <Box1_sub1>
               <ReactPlayer
-                url="https://www.youtube.com/watch?v=ug50zmP9I7s"
+                url="https://www.youtube.com/watch?v=QrKLyWPCZKQ"
                 width="100%"
                 height="600px"
                 controls={true}
@@ -627,7 +628,7 @@ function ViewerPage() {
 
             <Box1_sub2>
               <Box1_sub2_sub1>
-                <Text_Title> [놓치면 안될 하반기 IT이슈 Best 5] </Text_Title>
+                <Text_Title> Weather Ranger : OOTD Recommandation </Text_Title>
                 <Like img src={like} />
               </Box1_sub2_sub1>
               <Box1_sub2_sub2>
@@ -637,13 +638,13 @@ function ViewerPage() {
                 </Box1_sub2_sub2_sub1>
                 <Box1_sub2_sub2_sub2>
                   <Text_channel_description>
-                    BG Kim은 누구인가요?
+                  Who is BG Kim?
                   </Text_channel_description>
                   <Text_channel_description>
-                    microsoft, google, kakao 3사에 특별채용된 풀스택 개발자이자
+                  He is a specialized full-stack developer for Microsoft, Google, and Kakao
                   </Text_channel_description>
                   <Text_channel_description>
-                    IT’s Parter Creator 입니다.
+                  and IT's Parter Creator.
                   </Text_channel_description>
                   <Text_channel_description>
                     ‎‎‏‏‎ ‎‏‏‎
@@ -653,7 +654,7 @@ function ViewerPage() {
                   </Text_channel_description>
                   <Text_channel_description>
                     {" "}
-                    광고&협업문의는 bggirl@gmail.com
+                    For advertising & collaboration inquiries, visit bggirl@gmail.com
                   </Text_channel_description>
                 </Box1_sub2_sub2_sub2>
               </Box1_sub2_sub2>
@@ -668,28 +669,28 @@ function ViewerPage() {
                   <img style={{ width: "90%" }} src={video1} />
                   <Videotext>
                     {" "}
-                    IT시장의 트렌드 분석{" "}
+                    Trend Analysis in the IT Market{" "}
                   </Videotext>
                 </FirstVideo>
                 <Video>
                   <img style={{ width: "90%" }} src={video2} />
                   <Videotext>
                     {" "}
-                    하루만에 웹 사이트 만들기[완결판]{" "}
+                    Create a website in a day{" "}
                   </Videotext>
                 </Video>
                 <Video>
                   <img style={{ width: "90%" }} src={video3} />
                   <Videotext>
                     {" "}
-                    [Kids] 과학의 날 축하 영상{" "}
+                    [Kids] Science Day celebration video{" "}
                   </Videotext>
                 </Video>
                 <Video>
                   <img style={{ width: "90%" }} src={video4} />
                   <Videotext>
                     {" "}
-                    [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
+                    Making emoticons in a day{" "}
                   </Videotext>
                 </Video>
               </Col>

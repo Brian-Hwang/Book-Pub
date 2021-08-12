@@ -9,6 +9,7 @@ import pop2 from "../../assets/pop2.svg";
 import pop3 from "../../assets/pop3.svg";
 import pop4 from "../../assets/pop4.svg";
 import pop5 from "../../assets/pop5.svg";
+import 썸네일 from "../../assets/썸네일.PNG";
 
 import popular1 from "../../assets/popular1.svg";
 import advertisement from "../../assets/advertisement.svg";
@@ -29,6 +30,7 @@ import HS from "../../assets/university_HS.jpg";
 import DS from "../../assets/university_DS.jpg";
 import google from "../../assets/google.jpg";
 import samsung from "../../assets/samsung.jpg";
+
 const Background = styled.div`
   background-color: white;
   background-repeat: no-repeat;
@@ -40,30 +42,6 @@ const Background = styled.div`
   flex-direction: column; // 세로
 `;
 
-const Input = styled.input`
-  color: #000000;
-  // background-color: #F7F3F3;
-  line-height: 20px;
-  font-size: 16px;
-  overflow-wrap: "auto";
-  height: 30px;
-  width: 400px;
-  margin-left: 30px;
-  outline: none;
-  margin-top: 35px;
-`;
-const SearchButton = styled.button`
-  outline: none;
-  border: 1px solid rgba(255, 255, 255, 0);
-  border-radius: 10px;
-  width: 40px;
-  height: 37px;
-  margin-top: 35px;
-  margin-right: 116px;
-  margin-left: 20px;
-  background-color: #f7f3f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-`;
 
 const Wrapper1 = styled.div`
   display: flex;
@@ -114,16 +92,44 @@ const Line = styled.div`
 const Wrapper2 = styled.div`
   display: flex;
   align-items: center;
-  justify-items: flex-start;
+  justify-items: center;
   flex-direction: row; // 가로
-  width: 100%;
-  height: 100px;
-  margin-top: 20px;
+  width: 50%;
+  margin-left: 25%;
+  height: 200px;
+  margin-top: 50px;
+  overflow: hidden;
+  background-color: white;
 `;
 
 const MaskImage_logo = styled.img`
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 300px;
+`;
+
+const Input = styled.input`
+  color: #000000;
+  // background-color: #F7F3F3;
+  line-height: 20px;
+  font-size: 16px;
+  overflow-wrap: "auto";
+  height: 30px;
+  width: 700px;
+  margin-left: 10px;
+  outline: none;
+  margin-top: 55px;
+`;
+const SearchButton = styled.button`
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  width: 40px;
+  height: 37px;
+  margin-top: 55px;
+  margin-right: 116px;
+  margin-left: 20px;
+  background-color: #f7f3f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 const Wrapper3 = styled.div`
@@ -263,6 +269,14 @@ const Row = styled.div`
   align-items: flex-end;
   margin-bottom: 50px;
   justify-content: center;
+  width: 100%;
+  // overflow: hidden;
+`;
+
+const Row_title = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
   width: 100%;
   // overflow: hidden;
 `;
@@ -411,14 +425,14 @@ function MainPage() {
           <Line />`<Text_personal> Logout </Text_personal>`
         </Wrapper1>
         <Wrapper2>
-          <Row>
-            <MaskImage_logo img src={logo} />
-            <Input></Input>
-            <SearchButton>
-              {" "}
-              <img style={{ width: "30px", height: "30px" }} src={Search} />
-            </SearchButton>
-          </Row>
+        <Row_title>
+              <MaskImage_logo img src={logo} />
+              <Input></Input>
+              <SearchButton>
+                {" "}
+                <img style={{ width: "30px", height: "30px" }} src={Search} />
+              </SearchButton>
+            </Row_title>
         </Wrapper2>
         <Wrapper3>
           <Text_categories> Upload </Text_categories>
@@ -454,21 +468,21 @@ function MainPage() {
           <Title> Newly Updated </Title>
           <Box>
             <Video>
-              <img style={{ height: "300px", width: "300px" }} src={video1} />
+              <img style={{ height: "170px", width: "300px" }} src={썸네일} />
               <VideoTextButton onClick={() => history.push(`/viewer`)}>
                 {" "}
-                [HOT] 놓치면 안될 하반기 IT이슈 Best5{" "}
+                OOTD Recommandation{" "}
               </VideoTextButton>
             </Video>
             <Video>
               <img style={{ height: "300px", width: "300px" }} src={video2} />
-              <Videotext> 하루만에 웹 사이트 만들기[완결판] </Videotext>
+              <Videotext>Create a website in a day </Videotext>
             </Video>
             <Video>
               <img style={{ height: "300px", width: "300px" }} src={video3} />
               <Videotext>
                 {" "}
-                [제작부터 심사까지]하루만에 이모티콘 만들기{" "}
+                Making emoticons in a day{" "}
               </Videotext>
             </Video>
           </Box>
@@ -476,33 +490,33 @@ function MainPage() {
           <Box>
             <Video>
               <img style={{ height: "300px", width: "300px" }} src={video4} />
-              <Videotext> 유튜브 썸네일 쉽게 만들기 #1 </Videotext>
+              <Videotext> Make YouTube Thumbnails Easy #1 </Videotext>
             </Video>
             <Video>
               <img style={{ height: "300px", width: "300px" }} src={video5} />
               <Videotext>
                 {" "}
-                Dark World 개발자가 직접 공개하는 제작과정{" "}
+                Directly disclosed production process by Dark World developers{" "}
               </Videotext>
             </Video>
             <Video>
               <img style={{ height: "300px", width: "300px" }} src={video6} />
-              <Videotext> [Kids] 과학의 날 축하 영상 </Videotext>
+              <Videotext> [Kids] Science Day celebration video </Videotext>
             </Video>
           </Box>
 
           <Box>
             <Video>
               <img style={{ height: "300px", width: "300px" }} src={video7} />
-              <Videotext> IT시장의 트렌드 분석 </Videotext>
+              <Videotext> Trend Analysis in the IT Market </Videotext>
             </Video>
             <Video>
               <img style={{ height: "300px", width: "300px" }} src={video8} />
-              <Videotext> IT’s 닷컴에서 강의 시작했습니다. </Videotext>
+              <Videotext> We've started our lecture on IT's dotcom </Videotext>
             </Video>
             <Video>
               <img style={{ height: "300px", width: "300px" }} src={video9} />
-              <Videotext> 대기업 코딩테스트 합격 끝장내기 </Videotext>
+              <Videotext> End of Enterprise Coding Test Acceptance </Videotext>
             </Video>
           </Box>
 
@@ -520,7 +534,6 @@ function MainPage() {
 
               <ChargeText_under>• Free</ChargeText_under>
               <ChargeText>• Ads </ChargeText>
-              <ChargeText>• Charge </ChargeText>
               <ChargeText>• Paid Download </ChargeText>
               <ChargeText> ... </ChargeText>
             </ChargeBox>
@@ -533,7 +546,6 @@ function MainPage() {
 
               <ChargeText_under>• $3 per month</ChargeText_under>
               <ChargeText>• No Ads </ChargeText>
-              <ChargeText>• No charge </ChargeText>
               <ChargeText>• Free Download </ChargeText>
               <ChargeText> ... </ChargeText>
             </ChargeBox>
